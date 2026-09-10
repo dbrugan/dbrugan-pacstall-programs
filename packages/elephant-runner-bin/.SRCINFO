@@ -1,0 +1,13 @@
+pkgbase = elephant-runner-bin
+	gives = elephant-runner
+	pkgver = 2.22.0
+	pkgdesc = Command execution and PATH scanning for Elephant
+	url = https://github.com/abenz1267/elephant
+	arch = amd64
+	depends = elephant
+	license = GPL-3.0-or-later
+	maintainer = dbrugan <dbrugan@protonmail.com>
+	source = https://github.com/abenz1267/elephant/releases/download/v2.22.0/runner-linux-amd64.tar.gz
+	sha256sums = 2d46ee6310b31265b8eca767b049f5d481396c10aa9e6090106ad5a45062929a
+
+pkgname = elephant-runner-bin

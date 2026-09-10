@@ -1,0 +1,13 @@
+pkgbase = elephant-providerlist-bin
+	gives = elephant-providerlist
+	pkgver = 2.22.0
+	pkgdesc = Dynamic listing of all loaded providers and menus for Elephant
+	url = https://github.com/abenz1267/elephant
+	arch = amd64
+	depends = elephant
+	license = GPL-3.0-or-later
+	maintainer = dbrugan <dbrugan@protonmail.com>
+	source = https://github.com/abenz1267/elephant/releases/download/v2.22.0/providerlist-linux-amd64.tar.gz
+	sha256sums = 82f0de50e4e0e343cee1333e67b1f4ac372f44b94bc24390cd7ace5cce97f500
+
+pkgname = elephant-providerlist-bin
