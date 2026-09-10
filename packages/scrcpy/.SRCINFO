@@ -1,0 +1,27 @@
+pkgbase = scrcpy
+	pkgver = 4.1
+	pkgdesc = Display and control your Android device
+	url = https://github.com/Genymobile/scrcpy
+	arch = amd64
+	arch = arm64
+	depends = adb
+	depends = ffmpeg
+	depends = libsdl3-0
+	depends = libusb-1.0-0
+	makedepends = libavcodec-dev
+	makedepends = libavdevice-dev
+	makedepends = libavformat-dev
+	makedepends = libavutil-dev
+	makedepends = libsdl3-dev
+	makedepends = libswresample-dev
+	makedepends = libusb-1.0-0-dev
+	makedepends = meson
+	makedepends = ninja-build
+	replaces = scrcpy
+	repology = project: scrcpy
+	source = @scrcpy~4.1::https://github.com/Genymobile/scrcpy/archive/refs/tags/v4.1.tar.gz
+	source = scrcpy-server::https://github.com/Genymobile/scrcpy/releases/download/v4.1/scrcpy-server-v4.1
+	sha256sums = 537b2ade623cb94b6edddfa5c61bf0b0af21484aa8365ea2531b686ea573249a
+	sha256sums = deacb991ed2509715160ffdc7907e47b4160eb30d1566217e9047fd5b8850cae
+
+pkgname = scrcpy
