@@ -1,0 +1,16 @@
+pkgbase = ttf-jetbrains-mono-nerd
+	gives = ttf-jetbrains-mono-nerd
+	pkgver = 3.5.1
+	pkgdesc = Patched font JetBrains Mono from nerd fonts library
+	url = https://github.com/ryanoasis/nerd-fonts
+	arch = all
+	conflicts = nerd-fonts-jetbrains-mono
+	replaces = nerd-fonts-jetbrains-mono
+	provides = ttf-font-nerd
+	noextract = JetBrainsMono-3.5.1.tar.xz
+	license = OFL-1.1-no-RFN
+	maintainer = dbrugan <dbrugan@protonmail.com>
+	source = JetBrainsMono-3.5.1.tar.xz::https://github.com/ryanoasis/nerd-fonts/releases/download/v3.5.1/JetBrainsMono.tar.xz
+	sha256sums = 04d5e8f903693f9dd13e16f867e994834e681eb3c72c0d337a770dcda09010cf
+
+pkgname = ttf-jetbrains-mono-nerd
