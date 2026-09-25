@@ -239,6 +239,28 @@ pkgbase = gpu-screen-recorder
 
 pkgname = gpu-screen-recorder
 ---
+pkgbase = pmbootstrap
+	pkgver = 3.11.1
+	pkgrel = 1
+	pkgdesc = A sophisticated chroot/build/flash tool to develop and install postmarketOS
+	url = https://gitlab.postmarketos.org/postmarketOS/pmbootstrap
+	arch = all
+	depends = python3
+	depends = git
+	depends = openssl
+	depends = procps
+	depends = tar
+	depends = util-linux
+	makedepends = python3-pip
+	makedepends = python3-setuptools
+	recommends = python3-argcomplete
+	license = GPL-3.0-or-later
+	maintainer = dbrugan <dbrugan@protonmail.com>
+	source = https://gitlab.postmarketos.org/postmarketOS/pmbootstrap/-/archive/3.11.1/pmbootstrap-3.11.1.tar.gz
+	sha256sums = 64e4dccf7597ddc9cc807c00dc317c8bc78dc6203345d07a24c0541429938871
+
+pkgname = pmbootstrap
+---
 pkgbase = quickshell
 	pkgver = 0.3.0
 	pkgrel = 1
