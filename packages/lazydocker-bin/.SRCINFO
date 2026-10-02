@@ -1,0 +1,17 @@
+pkgbase = lazydocker-bin
+	gives = lazydocker
+	pkgver = 0.25.2
+	pkgrel = 1
+	pkgdesc = The lazier way to manage everything docker
+	url = https://github.com/jesseduffield/lazydocker
+	arch = amd64
+	suggests = docker-ce
+	suggests = docker-compose-plugin
+	suggests = docker-buildx-plugin
+	license = MIT
+	maintainer = dbrugan <dbrugan@protonmail.com>
+	repology = project: lazydocker
+	source = https://github.com/jesseduffield/lazydocker/releases/download/v0.25.2/lazydocker_0.25.2_Linux_x86_64.tar.gz
+	sha256sums = 0d9dbfc26068b218e7ed84b104748cadc6e3cf733c0afd35465306fb39b9523c
+
+pkgname = lazydocker-bin
