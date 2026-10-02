@@ -261,6 +261,29 @@ pkgbase = pmbootstrap
 
 pkgname = pmbootstrap
 ---
+pkgbase = python3-terminaltexteffects
+	gives = tte
+	pkgver = 0.15.0
+	pkgrel = 1
+	pkgdesc = Visual effects engine applied to text in the terminal
+	url = https://github.com/ChrisBuilds/terminaltexteffects
+	arch = any
+	depends = python3
+	makedepends = python3-build
+	makedepends = python3-installer
+	makedepends = python3-wheel
+	makedepends = python3-setuptools
+	makedepends = python3-hatchling
+	conflicts = terminaltexteffects
+	provides = tte
+	license = MIT
+	maintainer = dbrugan <dbrugan@protonmail.com>
+	repology = pypi:terminaltexteffects
+	source = terminaltexteffects-0.15.0.tar.gz::https://github.com/ChrisBuilds/terminaltexteffects/archive/refs/tags/release-0.15.0.tar.gz
+	sha256sums = 2f0c6796e1d6530bcec2c5533bd080b329872a4be1d66b641939a6dbda8479ca
+
+pkgname = python3-terminaltexteffects
+---
 pkgbase = quickshell
 	pkgver = 0.3.0
 	pkgrel = 1
