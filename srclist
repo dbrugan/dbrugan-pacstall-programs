@@ -501,6 +501,21 @@ pkgbase = walker-bin
 
 pkgname = walker-bin
 ---
+pkgbase = webapp-manager-deb
+	gives = webapp-manager
+	pkgver = 1.4.6
+	pkgrel = 1
+	pkgdesc = Run websites as if they were apps
+	url = https://github.com/linuxmint/webapp-manager
+	arch = all
+	license = GPL-3.0-only
+	maintainer = dbrugan <dbrugan@protonmail.com>
+	repology = project: webapp-manager
+	source = http://packages.linuxmint.com/pool/main/w/webapp-manager/webapp-manager_1.4.6_all.deb
+	sha256sums = 75f8c5d5edb0fc440880b801810b2a0231a772f901162e0c824c0bfa5727bcff
+
+pkgname = webapp-manager-deb
+---
 pkgbase = wiremix
 	pkgver = 0.11.0
 	pkgrel = 1

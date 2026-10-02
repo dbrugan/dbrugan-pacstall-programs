@@ -1,0 +1,13 @@
+pkgname="webapp-manager-deb"
+gives="webapp-manager"
+pkgver="1.4.6"
+pkgrel="1"
+pkgdesc="Run websites as if they were apps"
+url="https://github.com/linuxmint/webapp-manager"
+bugs="https://github.com/linuxmint/webapp-manager/issues"
+arch=("all")
+license=("GPL-3.0-only")
+repology=("project: webapp-manager")
+maintainer=("dbrugan <dbrugan@protonmail.com>")
+source=("http://packages.linuxmint.com/pool/main/w/webapp-manager/webapp-manager_${pkgver}_all.deb")
+sha256sums=("75f8c5d5edb0fc440880b801810b2a0231a772f901162e0c824c0bfa5727bcff")
