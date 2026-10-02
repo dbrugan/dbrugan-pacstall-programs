@@ -1,0 +1,13 @@
+pkgname="localsend-deb"
+gives="localsend"
+pkgver="1.18.2"
+pkgrel="1"
+pkgdesc="Open source cross-platform alternative to AirDrop"
+url="https://localsend.org"
+bugs="https://github.com/localsend/localsend/issues"
+arch=('amd64')
+license=('Apache-2.0')
+repology=("project: localsend")
+maintainer=("dbrugan <dbrugan@protonmail.com>")
+source=("https://github.com/localsend/localsend/releases/download/v${pkgver}/LocalSend-${pkgver}-linux-x86-64.deb")
+sha256sums=("cc42a4f3eacdcb25ec31f0016b1272acb003145ab30484db8965450e20c72cd2")
