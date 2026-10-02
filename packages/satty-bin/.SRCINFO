@@ -1,0 +1,21 @@
+pkgbase = satty-bin
+	gives = satty
+	pkgver = 0.22.0
+	pkgrel = 1
+	pkgdesc = Modern screenshot annotation tool, inspired by Swappy and Flameshot
+	url = https://github.com/Satty-org/Satty
+	arch = amd64
+	depends = libgtk-4-1
+	depends = libadwaita-1-0
+	depends = libgdk-pixbuf-2.0-0
+	depends = libpango-1.0-0
+	depends = libglib2.0-0t64
+	depends = fontconfig
+	depends = hicolor-icon-theme
+	license = MPL-2.0
+	maintainer = dbrugan <dbrugan@protonmail.com>
+	repology = project: satty
+	source = satty-0.22.0.tar.gz::https://github.com/Satty-org/Satty/releases/download/v0.22.0/satty-x86_64-unknown-linux-gnu.tar.gz
+	sha256sums = eb7a028c4a5ce331c2f355add8e2b807a7d697fe4495f7e1965786a4f6bcd5b8
+
+pkgname = satty-bin
