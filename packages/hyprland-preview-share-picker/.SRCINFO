@@ -1,0 +1,24 @@
+pkgbase = hyprland-preview-share-picker
+	pkgver = 0.2.1
+	pkgrel = 1
+	pkgdesc = An alternative share picker for hyprland with window and monitor previews
+	url = https://github.com/WhySoBad/hyprland-preview-share-picker
+	arch = amd64
+	depends = libgtk-4-1
+	depends = libgtk4-layer-shell0
+	depends = libwayland-client0
+	makedepends = cargo
+	makedepends = git
+	makedepends = pkg-config
+	makedepends = libgtk-4-dev
+	makedepends = libgtk4-layer-shell-dev
+	makedepends = libwayland-dev
+	suggests = hyprland
+	suggests = xdg-desktop-portal-hyprland
+	suggests = slurp
+	license = MIT
+	maintainer = dbrugan <dbrugan@protonmail.com>
+	source = git+https://github.com/WhySoBad/hyprland-preview-share-picker.git#commit=211b7890ed3332f4d1bb1f1a96999e18874a9c3c
+	sha256sums = SKIP
+
+pkgname = hyprland-preview-share-picker
