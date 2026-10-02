@@ -1,0 +1,14 @@
+pkgbase = obsidian-deb
+	gives = obsidian
+	pkgver = 1.13.7
+	pkgrel = 1
+	pkgdesc = Powerful and extensible knowledge base editor that uses markdown
+	url = https://obsidian.md
+	arch = amd64
+	license = LicenseRef-Proprietary
+	maintainer = dbrugan <dbrugan@protonmail.com>
+	repology = project: obsidian
+	source = https://github.com/obsidianmd/obsidian-releases/releases/download/v1.13.7/obsidian_1.13.7_amd64.deb
+	sha256sums = 17dc33b49cb3e785ecc27edd2ea0c79e40207798b554fd2886e36ebee7af9ae0
+
+pkgname = obsidian-deb
