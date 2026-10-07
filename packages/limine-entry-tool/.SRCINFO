@@ -1,0 +1,31 @@
+pkgbase = limine-entry-tool
+	pkgver = 1.40.0
+	pkgrel = 1
+	pkgdesc = Entry management for the Limine bootloader
+	url = https://gitlab.com/Zesko/limine-entry-tool
+	arch = amd64
+	depends = bash
+	depends = coreutils
+	depends = efibootmgr
+	depends = gawk
+	depends = grep
+	depends = sed
+	depends = tar
+	depends = util-linux
+	makedepends = gcc
+	makedepends = git
+	makedepends = libc6-dev
+	makedepends = unzip
+	makedepends = zlib1g-dev
+	pacdeps = limine
+	backup = etc/limine-entry-tool.conf
+	license = GPL-3.0-or-later
+	maintainer = dbrugan <dbrugan@protonmail.com>
+	source = git+https://gitlab.com/Zesko/limine-entry-tool.git#commit=35dab4b732861f5e8d307a1a7873856a877913aa
+	source = https://github.com/graalvm/graalvm-ce-builds/releases/download/jdk-25.0.2/graalvm-community-jdk-25.0.2_linux-x64_bin.tar.gz
+	source = https://services.gradle.org/distributions/gradle-9.8.0-bin.zip
+	sha256sums = SKIP
+	sha256sums = e0be791c8fda4d03b6b0a0cb824fef3149736170057b3a515252b44419606af0
+	sha256sums = bafd5ce9cfaea0fbccfdc8439a1ac42fbd4cd9c89dc9a988228d8a2639a58e6c
+
+pkgname = limine-entry-tool
