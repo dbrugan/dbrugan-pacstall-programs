@@ -41,6 +41,10 @@ backup=("etc/limine-entry-tool.conf")
 
 prepare() {
   mv graalvm-community-* "graalvm"
+  if ! command -v "${srcdir}/graalvm/bin/javac" > /dev/null 2>&1; then
+    fancy_message error "javac not found in the GraalVM tarball"
+    return 1
+  fi
 }
 
 build() {
