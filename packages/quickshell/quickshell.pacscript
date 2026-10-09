@@ -89,4 +89,27 @@ build() {
 package() {
   cd "quickshell-${pkgver}"
   DESTDIR="${pkgdir}" cmake --install build
+
+  # VENDOR_CPPTRACE=ON makes cmake --install drop cpptrace's bundled
+  # libdwarf/libzstd into the package: static libs, headers, pkgconfig and
+  # cmake configs. These collide with libdwarf-dev/libzstd-dev at dpkg install
+  # time. Everything is already statically linked into the binaries, so strip
+  # them to match the official package payload.
+  rm -rf \
+    "${pkgdir}/usr/include/cpptrace" \
+    "${pkgdir}/usr/include/ctrace" \
+    "${pkgdir}/usr/include/dwarf.h" \
+    "${pkgdir}/usr/include/libdwarf.h" \
+    "${pkgdir}/usr/include/zdict.h" \
+    "${pkgdir}/usr/include/zstd_errors.h" \
+    "${pkgdir}/usr/include/zstd.h" \
+    "${pkgdir}/usr/lib/x86_64-linux-gnu/cmake/cpptrace" \
+    "${pkgdir}/usr/lib/x86_64-linux-gnu/cmake/libdwarf" \
+    "${pkgdir}/usr/lib/x86_64-linux-gnu/cmake/zstd" \
+    "${pkgdir}/usr/lib/x86_64-linux-gnu/libcpptrace.a" \
+    "${pkgdir}/usr/lib/x86_64-linux-gnu/libdwarf.a" \
+    "${pkgdir}/usr/lib/x86_64-linux-gnu/libzstd.a" \
+    "${pkgdir}/usr/lib/x86_64-linux-gnu/pkgconfig/libdwarf.pc" \
+    "${pkgdir}/usr/lib/x86_64-linux-gnu/pkgconfig/libzstd.pc" \
+    "${pkgdir}/usr/share/cpptrace"
 }
