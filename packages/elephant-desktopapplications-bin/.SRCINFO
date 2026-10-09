@@ -1,13 +1,13 @@
 pkgbase = elephant-desktopapplications-bin
 	gives = elephant-desktopapplications
-	pkgver = 2.22.0
+	pkgver = 2.22.1
 	pkgdesc = Desktop application detection and launching for Elephant
 	url = https://github.com/abenz1267/elephant
 	arch = amd64
 	depends = elephant
 	license = GPL-3.0-or-later
 	maintainer = dbrugan <dbrugan@protonmail.com>
-	source = https://github.com/abenz1267/elephant/releases/download/v2.22.0/desktopapplications-linux-amd64.tar.gz
-	sha256sums = c5e527d2538b60b51297d9fe3cb0ce0867db89dce264464be278a4896658eb54
+	source = https://github.com/abenz1267/elephant/releases/download/v2.22.1/desktopapplications-linux-amd64.tar.gz
+	sha256sums = a185897cae065c036a2b2a5beac08201e0a233ad51587b9a553428434225c75a
 
 pkgname = elephant-desktopapplications-bin

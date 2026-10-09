@@ -1,6 +1,6 @@
 pkgname="elephant-bin"
 gives="elephant"
-pkgver="2.22.0"
+pkgver="2.22.1"
 pkgdesc="Powerful data provider service and backend for building custom application launchers and desktop utilities"
 url="https://github.com/abenz1267/elephant"
 bugs="https://github.com/abenz1267/elephant/issues"
@@ -9,7 +9,7 @@ license=("GPL-3.0-or-later")
 arch=("amd64")
 repology=("elephant")
 source=("https://github.com/abenz1267/elephant/releases/download/v${pkgver}/elephant-linux-amd64.tar.gz")
-sha256sums=("4370562d65ae23eb3398e0b80ad429e7049197e17647e8c7526c709b89df8340")
+sha256sums=("53098cd67fbd0eb256d02594b06ef6817031ed93e93911126bea9904b33ad775")
 
 package() {
   install -Dm755 "${srcdir}/elephant-linux-amd64" "${pkgdir}/usr/bin/elephant"

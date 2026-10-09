@@ -16,85 +16,85 @@ pkgname = caligula-bin
 ---
 pkgbase = elephant-bin
 	gives = elephant
-	pkgver = 2.22.0
+	pkgver = 2.22.1
 	pkgdesc = Powerful data provider service and backend for building custom application launchers and desktop utilities
 	url = https://github.com/abenz1267/elephant
 	arch = amd64
 	license = GPL-3.0-or-later
 	maintainer = dbrugan <dbrugan@protonmail.com>
 	repology = elephant
-	source = https://github.com/abenz1267/elephant/releases/download/v2.22.0/elephant-linux-amd64.tar.gz
-	sha256sums = 4370562d65ae23eb3398e0b80ad429e7049197e17647e8c7526c709b89df8340
+	source = https://github.com/abenz1267/elephant/releases/download/v2.22.1/elephant-linux-amd64.tar.gz
+	sha256sums = 53098cd67fbd0eb256d02594b06ef6817031ed93e93911126bea9904b33ad775
 
 pkgname = elephant-bin
 ---
 pkgbase = elephant-clipboard-bin
 	gives = elephant-clipboard
-	pkgver = 2.22.0
+	pkgver = 2.22.1
 	pkgdesc = Clipboard history and management for Elephant
 	url = https://github.com/abenz1267/elephant
 	arch = amd64
 	depends = elephant
 	license = GPL-3.0-or-later
 	maintainer = dbrugan <dbrugan@protonmail.com>
-	source = https://github.com/abenz1267/elephant/releases/download/v2.22.0/clipboard-linux-amd64.tar.gz
-	sha256sums = 9af4030af240339b8027143d50f178350c2734c0167062e1ed8aeaf051f3e722
+	source = https://github.com/abenz1267/elephant/releases/download/v2.22.1/clipboard-linux-amd64.tar.gz
+	sha256sums = 775a7bca91493fffce27f33f65b91c0a92b96b51a3cb3fe0e99143ff0f18e099
 
 pkgname = elephant-clipboard-bin
 ---
 pkgbase = elephant-desktopapplications-bin
 	gives = elephant-desktopapplications
-	pkgver = 2.22.0
+	pkgver = 2.22.1
 	pkgdesc = Desktop application detection and launching for Elephant
 	url = https://github.com/abenz1267/elephant
 	arch = amd64
 	depends = elephant
 	license = GPL-3.0-or-later
 	maintainer = dbrugan <dbrugan@protonmail.com>
-	source = https://github.com/abenz1267/elephant/releases/download/v2.22.0/desktopapplications-linux-amd64.tar.gz
-	sha256sums = c5e527d2538b60b51297d9fe3cb0ce0867db89dce264464be278a4896658eb54
+	source = https://github.com/abenz1267/elephant/releases/download/v2.22.1/desktopapplications-linux-amd64.tar.gz
+	sha256sums = a185897cae065c036a2b2a5beac08201e0a233ad51587b9a553428434225c75a
 
 pkgname = elephant-desktopapplications-bin
 ---
 pkgbase = elephant-files-bin
 	gives = elephant-files
-	pkgver = 2.22.0
+	pkgver = 2.22.1
 	pkgdesc = File browsing, preview, and operations for Elephant
 	url = https://github.com/abenz1267/elephant
 	arch = amd64
 	depends = elephant
 	license = GPL-3.0-or-later
 	maintainer = dbrugan <dbrugan@protonmail.com>
-	source = https://github.com/abenz1267/elephant/releases/download/v2.22.0/files-linux-amd64.tar.gz
-	sha256sums = cb25ec2349697ea2280cfc3ad39c106473a57929a5967a68466162c42f66a3a9
+	source = https://github.com/abenz1267/elephant/releases/download/v2.22.1/files-linux-amd64.tar.gz
+	sha256sums = 1342d88da31610fdadb3c62445c033ca188a4bbcb17da992d1ef2ee0f23be9dc
 
 pkgname = elephant-files-bin
 ---
 pkgbase = elephant-providerlist-bin
 	gives = elephant-providerlist
-	pkgver = 2.22.0
+	pkgver = 2.22.1
 	pkgdesc = Dynamic listing of all loaded providers and menus for Elephant
 	url = https://github.com/abenz1267/elephant
 	arch = amd64
 	depends = elephant
 	license = GPL-3.0-or-later
 	maintainer = dbrugan <dbrugan@protonmail.com>
-	source = https://github.com/abenz1267/elephant/releases/download/v2.22.0/providerlist-linux-amd64.tar.gz
-	sha256sums = 82f0de50e4e0e343cee1333e67b1f4ac372f44b94bc24390cd7ace5cce97f500
+	source = https://github.com/abenz1267/elephant/releases/download/v2.22.1/providerlist-linux-amd64.tar.gz
+	sha256sums = bafb807419f9cf38825935e15097aea10adc8678234468a7971543d3bba59862
 
 pkgname = elephant-providerlist-bin
 ---
 pkgbase = elephant-runner-bin
 	gives = elephant-runner
-	pkgver = 2.22.0
+	pkgver = 2.22.1
 	pkgdesc = Command execution and PATH scanning for Elephant
 	url = https://github.com/abenz1267/elephant
 	arch = amd64
 	depends = elephant
 	license = GPL-3.0-or-later
 	maintainer = dbrugan <dbrugan@protonmail.com>
-	source = https://github.com/abenz1267/elephant/releases/download/v2.22.0/runner-linux-amd64.tar.gz
-	sha256sums = 2d46ee6310b31265b8eca767b049f5d481396c10aa9e6090106ad5a45062929a
+	source = https://github.com/abenz1267/elephant/releases/download/v2.22.1/runner-linux-amd64.tar.gz
+	sha256sums = 0a6ff0435b62b5c804a55cc2cd7af9ea846f412eeec62277212b7f14a6fc15ca
 
 pkgname = elephant-runner-bin
 ---
