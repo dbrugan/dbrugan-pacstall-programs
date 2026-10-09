@@ -1,6 +1,6 @@
 pkgname="telegram-bin"
 gives="telegram"
-pkgver="7.0.9"
+pkgver="7.3.0"
 pkgrel="1"
 pkgdesc="Official Telegram Desktop client - static binaries installed to /opt/Telegram with working in-app self-updater"
 arch=("amd64")
@@ -18,7 +18,7 @@ source=(
   "${source_base_url}/raw/v${pkgver}/Telegram/Resources/art/icon128.png"
   "${source_base_url}/raw/v${pkgver}/Telegram/Resources/art/icon256.png"
   "${source_base_url}/raw/v${pkgver}/Telegram/Resources/art/icon512.png"
-  "@${pkgname}-${pkgver}::${source_base_url}/releases/download/v${pkgver}/tsetup.${pkgver}.tar.xz"
+  "@${pkgname}-${pkgver}::${source_base_url}/releases/download/v${pkgver}/td-setup-linux-x64-${pkgver}.tar.xz"
 )
 sha256sums=(
   "ea1f36152b143cc2664daef5026656d55be2230ed42d43628e17ef7d2fff718c"
@@ -28,7 +28,7 @@ sha256sums=(
   "731431e47a5bc91c697d25c3a54fe7ba004752f5b66e0f282c47588ff7a314e6"
   "3fb1400c7dc9bbc3b5cb3ffedcbf4a9b09c53e28b57a7ff33a8a6b9048864090"
   "e297771c75bd2f81d637a3234f83568be62092f67d16946be23895fa92fa7119"
-  "d3c05df0259ab116d11d8c1cdc1403019d2a3be303ad3b46d16a84e19df6615f"
+  "6c2fe0e02505a36a2522e3ba36371819a3a443ac289a5ac1dd3793de37925351"
 )
 
 package() {
