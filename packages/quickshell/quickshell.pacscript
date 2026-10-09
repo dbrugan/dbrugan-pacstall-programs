@@ -1,5 +1,5 @@
 pkgname="quickshell"
-pkgver="0.3.0"
+pkgver="0.3.2"
 pkgrel="1"
 pkgdesc="Flexible toolkit for making desktop shells with QtQuick"
 url="https://quickshell.org/"
@@ -72,7 +72,7 @@ makedepends=(
 )
 
 source=("https://github.com/quickshell-mirror/quickshell/archive/refs/tags/v${pkgver}.tar.gz")
-sha256sums=("5229069b0f1d375f34b0a04a4e6a69156e2f010995d9ec5a943793424e589b5d")
+sha256sums=("946a27e2a276917a03c1079e5c60971af84ece73088c3661dee455d92eb420f7")
 external_connection=true
 
 build() {
