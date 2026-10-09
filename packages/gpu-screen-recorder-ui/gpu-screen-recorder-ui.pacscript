@@ -31,6 +31,7 @@ depends=(
   "libegl1"
   "libdbus-1-3"
   "libpango-1.0-0"
+  "libpangoft2-1.0-0"
   "libcap2"
 )
 
@@ -46,6 +47,7 @@ makedepends=(
   "libxcomposite-dev"
   "libxfixes-dev"
   "libxext-dev"
+  "libxrender-dev"
   "libxi-dev"
   "libxcursor-dev"
   "libwayland-dev"
@@ -56,8 +58,11 @@ makedepends=(
   "libpulse-dev"
   "libdrm-dev"
   "libdbus-1-dev"
+  "libglib2.0-dev"
+  "libgio-2.0-dev"
   "libpango1.0-dev"
   "libcap-dev"
+  "cmake"
 )
 
 source=("git+https://repo.dec05eba.com/gpu-screen-recorder-ui.git#commit=99c9da14757152423c6d9f8eae02963acfc24601")
