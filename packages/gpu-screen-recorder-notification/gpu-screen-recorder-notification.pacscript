@@ -1,6 +1,6 @@
 pkgname="gpu-screen-recorder-notification"
 gives="gsr-notify"
-pkgver="1.3.4"
+pkgver="1.3.6"
 pkgrel="1"
 pkgdesc="Notification component for GPU Screen Recorder"
 url="https://git.dec05eba.com/gpu-screen-recorder-notification"
@@ -24,7 +24,7 @@ makedepends=(
   "wayland-protocols"
 )
 
-source=("git+https://repo.dec05eba.com/gpu-screen-recorder-notification.git#commit=8db381865f5d03212f51fdadcf0d357ed6ea4a60")
+source=("git+https://repo.dec05eba.com/gpu-screen-recorder-notification.git#commit=54bc6c8f139a5ff4025a4585d01c9e3f23894b72")
 sha256sums=("SKIP")
 external_connection=true
 

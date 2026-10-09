@@ -1,5 +1,5 @@
 pkgname="gpu-screen-recorder"
-pkgver="6.0.0"
+pkgver="6.1.3"
 pkgrel="1"
 pkgdesc="A screen recorder that uses the GPU for encoding with minimal impact on system performance"
 url="https://git.dec05eba.com/gpu-screen-recorder"
@@ -60,7 +60,7 @@ makedepends=(
   "wayland-protocols"
 )
 
-source=("git+https://repo.dec05eba.com/gpu-screen-recorder.git#commit=80517840f4ae64469721598e8373d81f2e4493dd")
+source=("git+https://repo.dec05eba.com/gpu-screen-recorder.git#commit=396526a908f8f1b9cb826a9187a2c9150f44d94d")
 sha256sums=("SKIP")
 external_connection=true
 
