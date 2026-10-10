@@ -18,7 +18,7 @@ source=(
   "${source_base_url}/raw/v${pkgver}/Telegram/Resources/art/icon128.png"
   "${source_base_url}/raw/v${pkgver}/Telegram/Resources/art/icon256.png"
   "${source_base_url}/raw/v${pkgver}/Telegram/Resources/art/icon512.png"
-  "@${pkgname}-${pkgver}::${source_base_url}/releases/download/v${pkgver}/td-setup-linux-x64-${pkgver}.tar.xz"
+  "${source_base_url}/releases/download/v${pkgver}/td-setup-linux-x64-${pkgver}.tar.xz"
 )
 sha256sums=(
   "ea1f36152b143cc2664daef5026656d55be2230ed42d43628e17ef7d2fff718c"
