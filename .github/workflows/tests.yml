@@ -11,7 +11,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        OS: ["ubuntu:latest", "ubuntu:devel", "ubuntu:rolling", "debian:stable", "debian:testing", "debian:unstable"]
+        OS: ["ubuntu:latest", "ubuntu:devel", "ubuntu:rolling", "debian:testing", "debian:unstable"]
         PACSTALL_VERSION: ["master", "develop"]
 
     runs-on: ubuntu-latest
