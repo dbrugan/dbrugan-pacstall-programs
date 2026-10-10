@@ -1,6 +1,6 @@
 pkgname="walker-bin"
 gives="walker"
-pkgver="2.17.0"
+pkgver="2.17.2"
 pkgdesc="Multi-purpose launcher for Wayland with a lot of features"
 url="https://github.com/abenz1267/walker"
 bugs="https://github.com/abenz1267/walker/issues"
@@ -20,8 +20,8 @@ source=(
   "https://github.com/abenz1267/walker/archive/refs/tags/v${pkgver}.tar.gz"
 )
 sha256sums=(
-  "eab433ca0f81b4fd2ab611bb00833c5b33df4c883475c763bb1d7337eb0908fb"
-  "c3498742a9866422b2947340a515eeb7932333bb8f99b171d159c0a7ece0a12f"
+  "57e68d1f9f14782f1ae0f1c704509749a545a92531b8788b76b16bc29fcc5c19"
+  "e50c606040b24f2a6045292f5f6a08c8a05ac599878ac781b1a5fcf50d353a56"
 )
 
 package() {

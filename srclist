@@ -16,114 +16,130 @@ pkgname = caligula-bin
 ---
 pkgbase = elephant-bin
 	gives = elephant
-	pkgver = 2.22.0
+	pkgver = 2.22.1
 	pkgdesc = Powerful data provider service and backend for building custom application launchers and desktop utilities
 	url = https://github.com/abenz1267/elephant
 	arch = amd64
 	license = GPL-3.0-or-later
 	maintainer = dbrugan <dbrugan@protonmail.com>
 	repology = elephant
-	source = https://github.com/abenz1267/elephant/releases/download/v2.22.0/elephant-linux-amd64.tar.gz
-	sha256sums = 4370562d65ae23eb3398e0b80ad429e7049197e17647e8c7526c709b89df8340
+	source = https://github.com/abenz1267/elephant/releases/download/v2.22.1/elephant-linux-amd64.tar.gz
+	sha256sums = 53098cd67fbd0eb256d02594b06ef6817031ed93e93911126bea9904b33ad775
 
 pkgname = elephant-bin
 ---
 pkgbase = elephant-clipboard-bin
 	gives = elephant-clipboard
-	pkgver = 2.22.0
+	pkgver = 2.22.1
 	pkgdesc = Clipboard history and management for Elephant
 	url = https://github.com/abenz1267/elephant
 	arch = amd64
-	depends = elephant
+	pacdeps = elephant-bin
 	license = GPL-3.0-or-later
 	maintainer = dbrugan <dbrugan@protonmail.com>
-	source = https://github.com/abenz1267/elephant/releases/download/v2.22.0/clipboard-linux-amd64.tar.gz
-	sha256sums = 9af4030af240339b8027143d50f178350c2734c0167062e1ed8aeaf051f3e722
+	source = https://github.com/abenz1267/elephant/releases/download/v2.22.1/clipboard-linux-amd64.tar.gz
+	sha256sums = 775a7bca91493fffce27f33f65b91c0a92b96b51a3cb3fe0e99143ff0f18e099
 
 pkgname = elephant-clipboard-bin
 ---
 pkgbase = elephant-desktopapplications-bin
 	gives = elephant-desktopapplications
-	pkgver = 2.22.0
+	pkgver = 2.22.1
 	pkgdesc = Desktop application detection and launching for Elephant
 	url = https://github.com/abenz1267/elephant
 	arch = amd64
-	depends = elephant
+	pacdeps = elephant-bin
 	license = GPL-3.0-or-later
 	maintainer = dbrugan <dbrugan@protonmail.com>
-	source = https://github.com/abenz1267/elephant/releases/download/v2.22.0/desktopapplications-linux-amd64.tar.gz
-	sha256sums = c5e527d2538b60b51297d9fe3cb0ce0867db89dce264464be278a4896658eb54
+	source = https://github.com/abenz1267/elephant/releases/download/v2.22.1/desktopapplications-linux-amd64.tar.gz
+	sha256sums = a185897cae065c036a2b2a5beac08201e0a233ad51587b9a553428434225c75a
 
 pkgname = elephant-desktopapplications-bin
 ---
 pkgbase = elephant-files-bin
 	gives = elephant-files
-	pkgver = 2.22.0
+	pkgver = 2.22.1
 	pkgdesc = File browsing, preview, and operations for Elephant
 	url = https://github.com/abenz1267/elephant
 	arch = amd64
-	depends = elephant
+	pacdeps = elephant-bin
 	license = GPL-3.0-or-later
 	maintainer = dbrugan <dbrugan@protonmail.com>
-	source = https://github.com/abenz1267/elephant/releases/download/v2.22.0/files-linux-amd64.tar.gz
-	sha256sums = cb25ec2349697ea2280cfc3ad39c106473a57929a5967a68466162c42f66a3a9
+	source = https://github.com/abenz1267/elephant/releases/download/v2.22.1/files-linux-amd64.tar.gz
+	sha256sums = 1342d88da31610fdadb3c62445c033ca188a4bbcb17da992d1ef2ee0f23be9dc
 
 pkgname = elephant-files-bin
 ---
 pkgbase = elephant-providerlist-bin
 	gives = elephant-providerlist
-	pkgver = 2.22.0
+	pkgver = 2.22.1
 	pkgdesc = Dynamic listing of all loaded providers and menus for Elephant
 	url = https://github.com/abenz1267/elephant
 	arch = amd64
-	depends = elephant
+	pacdeps = elephant-bin
 	license = GPL-3.0-or-later
 	maintainer = dbrugan <dbrugan@protonmail.com>
-	source = https://github.com/abenz1267/elephant/releases/download/v2.22.0/providerlist-linux-amd64.tar.gz
-	sha256sums = 82f0de50e4e0e343cee1333e67b1f4ac372f44b94bc24390cd7ace5cce97f500
+	source = https://github.com/abenz1267/elephant/releases/download/v2.22.1/providerlist-linux-amd64.tar.gz
+	sha256sums = bafb807419f9cf38825935e15097aea10adc8678234468a7971543d3bba59862
 
 pkgname = elephant-providerlist-bin
 ---
 pkgbase = elephant-runner-bin
 	gives = elephant-runner
-	pkgver = 2.22.0
+	pkgver = 2.22.1
 	pkgdesc = Command execution and PATH scanning for Elephant
 	url = https://github.com/abenz1267/elephant
 	arch = amd64
-	depends = elephant
+	pacdeps = elephant-bin
 	license = GPL-3.0-or-later
 	maintainer = dbrugan <dbrugan@protonmail.com>
-	source = https://github.com/abenz1267/elephant/releases/download/v2.22.0/runner-linux-amd64.tar.gz
-	sha256sums = 2d46ee6310b31265b8eca767b049f5d481396c10aa9e6090106ad5a45062929a
+	source = https://github.com/abenz1267/elephant/releases/download/v2.22.1/runner-linux-amd64.tar.gz
+	sha256sums = 0a6ff0435b62b5c804a55cc2cd7af9ea846f412eeec62277212b7f14a6fc15ca
 
 pkgname = elephant-runner-bin
 ---
 pkgbase = gpu-screen-recorder-notification
 	gives = gsr-notify
-	pkgver = 1.3.4
+	pkgver = 1.3.6
 	pkgrel = 1
 	pkgdesc = Notification component for GPU Screen Recorder
 	url = https://git.dec05eba.com/gpu-screen-recorder-notification
 	arch = amd64
 	depends = libxext6
 	depends = libwayland-client0
+	depends = libwayland-cursor0
+	depends = libwayland-egl1
+	depends = libx11-6
+	depends = libxrender1
+	depends = libxrandr2
+	depends = libxkbcommon0
+	depends = libglib2.0-0t64
+	depends = libpangoft2-1.0-0
 	makedepends = meson
 	makedepends = ninja-build
 	makedepends = pkg-config
+	makedepends = cmake
 	makedepends = g++
 	makedepends = git
+	makedepends = libx11-dev
 	makedepends = libxext-dev
+	makedepends = libxrender-dev
+	makedepends = libxrandr-dev
+	makedepends = libxkbcommon-dev
 	makedepends = libwayland-dev
 	makedepends = wayland-protocols
+	makedepends = libglib2.0-dev
+	makedepends = libgio-2.0-dev
+	makedepends = libpango1.0-dev
 	license = GPL-3.0-only
 	maintainer = dbrugan <dbrugan@protonmail.com>
-	source = git+https://repo.dec05eba.com/gpu-screen-recorder-notification.git#commit=8db381865f5d03212f51fdadcf0d357ed6ea4a60
+	source = git+https://repo.dec05eba.com/gpu-screen-recorder-notification.git#commit=54bc6c8f139a5ff4025a4585d01c9e3f23894b72
 	sha256sums = SKIP
 
 pkgname = gpu-screen-recorder-notification
 ---
 pkgbase = gpu-screen-recorder-ui
-	pkgver = 1.13.5
+	pkgver = 1.13.10
 	pkgrel = 1
 	pkgdesc = A fullscreen overlay UI for GPU Screen Recorder in the style of ShadowPlay
 	url = https://git.dec05eba.com/gpu-screen-recorder-ui
@@ -146,6 +162,7 @@ pkgbase = gpu-screen-recorder-ui
 	depends = libegl1
 	depends = libdbus-1-3
 	depends = libpango-1.0-0
+	depends = libpangoft2-1.0-0
 	depends = libcap2
 	makedepends = meson
 	makedepends = ninja-build
@@ -158,6 +175,7 @@ pkgbase = gpu-screen-recorder-ui
 	makedepends = libxcomposite-dev
 	makedepends = libxfixes-dev
 	makedepends = libxext-dev
+	makedepends = libxrender-dev
 	makedepends = libxi-dev
 	makedepends = libxcursor-dev
 	makedepends = libwayland-dev
@@ -168,19 +186,22 @@ pkgbase = gpu-screen-recorder-ui
 	makedepends = libpulse-dev
 	makedepends = libdrm-dev
 	makedepends = libdbus-1-dev
+	makedepends = libglib2.0-dev
+	makedepends = libgio-2.0-dev
 	makedepends = libpango1.0-dev
 	makedepends = libcap-dev
+	makedepends = cmake
 	suggests = gpu-screen-recorder
 	suggests = gpu-screen-recorder-notification
 	license = GPL-3.0-only
 	maintainer = dbrugan <dbrugan@protonmail.com>
-	source = git+https://repo.dec05eba.com/gpu-screen-recorder-ui.git#commit=edfc70d99ba9adbce3f7e61642ac21ea1542e50f
+	source = git+https://repo.dec05eba.com/gpu-screen-recorder-ui.git#commit=99c9da14757152423c6d9f8eae02963acfc24601
 	sha256sums = SKIP
 
 pkgname = gpu-screen-recorder-ui
 ---
 pkgbase = gpu-screen-recorder
-	pkgver = 6.0.0
+	pkgver = 6.1.3
 	pkgrel = 1
 	pkgdesc = A screen recorder that uses the GPU for encoding with minimal impact on system performance
 	url = https://git.dec05eba.com/gpu-screen-recorder
@@ -234,7 +255,7 @@ pkgbase = gpu-screen-recorder
 	makedepends = wayland-protocols
 	license = GPL-3.0-only
 	maintainer = dbrugan <dbrugan@protonmail.com>
-	source = git+https://repo.dec05eba.com/gpu-screen-recorder.git#commit=80517840f4ae64469721598e8373d81f2e4493dd
+	source = git+https://repo.dec05eba.com/gpu-screen-recorder.git#commit=396526a908f8f1b9cb826a9187a2c9150f44d94d
 	sha256sums = SKIP
 
 pkgname = gpu-screen-recorder
@@ -383,16 +404,16 @@ pkgname = localsend-deb
 ---
 pkgbase = obsidian-deb
 	gives = obsidian
-	pkgver = 1.13.7
+	pkgver = 1.14.4
 	pkgrel = 1
 	pkgdesc = Powerful and extensible knowledge base editor that uses markdown
 	url = https://obsidian.md
 	arch = amd64
-	license = LicenseRef-Proprietary
+	license = custom:LicenseRef-Proprietary
 	maintainer = dbrugan <dbrugan@protonmail.com>
 	repology = project: obsidian
-	source = https://github.com/obsidianmd/obsidian-releases/releases/download/v1.13.7/obsidian_1.13.7_amd64.deb
-	sha256sums = 17dc33b49cb3e785ecc27edd2ea0c79e40207798b554fd2886e36ebee7af9ae0
+	source = https://github.com/obsidianmd/obsidian-releases/releases/download/v1.14.4/obsidian_1.14.4_amd64.deb
+	sha256sums = 85b10dcba6edfc1c0460a6d18260cf31c30447a444bd858a6440b9c9c8806d25
 
 pkgname = obsidian-deb
 ---
@@ -442,7 +463,7 @@ pkgbase = python3-terminaltexteffects
 pkgname = python3-terminaltexteffects
 ---
 pkgbase = quickshell
-	pkgver = 0.3.0
+	pkgver = 0.3.2
 	pkgrel = 1
 	pkgdesc = Flexible toolkit for making desktop shells with QtQuick
 	url = https://quickshell.org/
@@ -506,8 +527,8 @@ pkgbase = quickshell
 	provides = quickshell
 	license = LGPL-3.0-or-later
 	maintainer = dbrugan <dbrugan@protonmail.com>
-	source = https://github.com/quickshell-mirror/quickshell/archive/refs/tags/v0.3.0.tar.gz
-	sha256sums = 5229069b0f1d375f34b0a04a4e6a69156e2f010995d9ec5a943793424e589b5d
+	source = https://github.com/quickshell-mirror/quickshell/archive/refs/tags/v0.3.2.tar.gz
+	sha256sums = 946a27e2a276917a03c1079e5c60971af84ece73088c3661dee455d92eb420f7
 
 pkgname = quickshell
 ---
@@ -535,7 +556,7 @@ pkgname = satty-bin
 ---
 pkgbase = telegram-bin
 	gives = telegram
-	pkgver = 7.0.9
+	pkgver = 7.3.0
 	pkgrel = 1
 	pkgdesc = Official Telegram Desktop client - static binaries installed to /opt/Telegram with working in-app self-updater
 	url = https://telegram.org/
@@ -543,14 +564,14 @@ pkgbase = telegram-bin
 	license = GPL-3.0-only
 	maintainer = dbrugan <dbrugan@protonmail.com>
 	repology = project: telegram-desktop
-	source = https://github.com/telegramdesktop/tdesktop/raw/v7.0.9/Telegram/Resources/art/icon16.png
-	source = https://github.com/telegramdesktop/tdesktop/raw/v7.0.9/Telegram/Resources/art/icon32.png
-	source = https://github.com/telegramdesktop/tdesktop/raw/v7.0.9/Telegram/Resources/art/icon48.png
-	source = https://github.com/telegramdesktop/tdesktop/raw/v7.0.9/Telegram/Resources/art/icon64.png
-	source = https://github.com/telegramdesktop/tdesktop/raw/v7.0.9/Telegram/Resources/art/icon128.png
-	source = https://github.com/telegramdesktop/tdesktop/raw/v7.0.9/Telegram/Resources/art/icon256.png
-	source = https://github.com/telegramdesktop/tdesktop/raw/v7.0.9/Telegram/Resources/art/icon512.png
-	source = @telegram-bin-7.0.9::https://github.com/telegramdesktop/tdesktop/releases/download/v7.0.9/tsetup.7.0.9.tar.xz
+	source = https://github.com/telegramdesktop/tdesktop/raw/v7.3.0/Telegram/Resources/art/icon16.png
+	source = https://github.com/telegramdesktop/tdesktop/raw/v7.3.0/Telegram/Resources/art/icon32.png
+	source = https://github.com/telegramdesktop/tdesktop/raw/v7.3.0/Telegram/Resources/art/icon48.png
+	source = https://github.com/telegramdesktop/tdesktop/raw/v7.3.0/Telegram/Resources/art/icon64.png
+	source = https://github.com/telegramdesktop/tdesktop/raw/v7.3.0/Telegram/Resources/art/icon128.png
+	source = https://github.com/telegramdesktop/tdesktop/raw/v7.3.0/Telegram/Resources/art/icon256.png
+	source = https://github.com/telegramdesktop/tdesktop/raw/v7.3.0/Telegram/Resources/art/icon512.png
+	source = https://github.com/telegramdesktop/tdesktop/releases/download/v7.3.0/td-setup-linux-x64-7.3.0.tar.xz
 	sha256sums = ea1f36152b143cc2664daef5026656d55be2230ed42d43628e17ef7d2fff718c
 	sha256sums = 9e4180c78c895783b4559c5e1a7868a2c9aa30a29969fe5dbe9a4ce4cf5cde6c
 	sha256sums = 041b78681a35f07c3c929662fc66b6592c88588dc7297a5394ef7f923f2118e2
@@ -558,7 +579,7 @@ pkgbase = telegram-bin
 	sha256sums = 731431e47a5bc91c697d25c3a54fe7ba004752f5b66e0f282c47588ff7a314e6
 	sha256sums = 3fb1400c7dc9bbc3b5cb3ffedcbf4a9b09c53e28b57a7ff33a8a6b9048864090
 	sha256sums = e297771c75bd2f81d637a3234f83568be62092f67d16946be23895fa92fa7119
-	sha256sums = d3c05df0259ab116d11d8c1cdc1403019d2a3be303ad3b46d16a84e19df6615f
+	sha256sums = 6c2fe0e02505a36a2522e3ba36371819a3a443ac289a5ac1dd3793de37925351
 
 pkgname = telegram-bin
 ---
@@ -581,7 +602,7 @@ pkgname = ttf-jetbrains-mono-nerd
 ---
 pkgbase = walker-bin
 	gives = walker
-	pkgver = 2.17.0
+	pkgver = 2.17.2
 	pkgdesc = Multi-purpose launcher for Wayland with a lot of features
 	url = https://github.com/abenz1267/walker
 	arch = amd64
@@ -593,10 +614,10 @@ pkgbase = walker-bin
 	license = GPL-3.0-or-later
 	maintainer = dbrugan <dbrugan@protonmail.com>
 	repology = walker
-	source = https://github.com/abenz1267/walker/releases/download/v2.17.0/walker-v2.17.0-x86_64-unknown-linux-gnu.tar.gz
-	source = https://github.com/abenz1267/walker/archive/refs/tags/v2.17.0.tar.gz
-	sha256sums = eab433ca0f81b4fd2ab611bb00833c5b33df4c883475c763bb1d7337eb0908fb
-	sha256sums = c3498742a9866422b2947340a515eeb7932333bb8f99b171d159c0a7ece0a12f
+	source = https://github.com/abenz1267/walker/releases/download/v2.17.2/walker-v2.17.2-x86_64-unknown-linux-gnu.tar.gz
+	source = https://github.com/abenz1267/walker/archive/refs/tags/v2.17.2.tar.gz
+	sha256sums = 57e68d1f9f14782f1ae0f1c704509749a545a92531b8788b76b16bc29fcc5c19
+	sha256sums = e50c606040b24f2a6045292f5f6a08c8a05ac599878ac781b1a5fcf50d353a56
 
 pkgname = walker-bin
 ---

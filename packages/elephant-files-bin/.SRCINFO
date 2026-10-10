@@ -1,13 +1,13 @@
 pkgbase = elephant-files-bin
 	gives = elephant-files
-	pkgver = 2.22.0
+	pkgver = 2.22.1
 	pkgdesc = File browsing, preview, and operations for Elephant
 	url = https://github.com/abenz1267/elephant
 	arch = amd64
-	depends = elephant
+	pacdeps = elephant-bin
 	license = GPL-3.0-or-later
 	maintainer = dbrugan <dbrugan@protonmail.com>
-	source = https://github.com/abenz1267/elephant/releases/download/v2.22.0/files-linux-amd64.tar.gz
-	sha256sums = cb25ec2349697ea2280cfc3ad39c106473a57929a5967a68466162c42f66a3a9
+	source = https://github.com/abenz1267/elephant/releases/download/v2.22.1/files-linux-amd64.tar.gz
+	sha256sums = 1342d88da31610fdadb3c62445c033ca188a4bbcb17da992d1ef2ee0f23be9dc
 
 pkgname = elephant-files-bin

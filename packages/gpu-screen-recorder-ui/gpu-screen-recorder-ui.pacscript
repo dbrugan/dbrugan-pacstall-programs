@@ -1,5 +1,5 @@
 pkgname="gpu-screen-recorder-ui"
-pkgver="1.13.5"
+pkgver="1.13.10"
 pkgrel="1"
 pkgdesc="A fullscreen overlay UI for GPU Screen Recorder in the style of ShadowPlay"
 url="https://git.dec05eba.com/gpu-screen-recorder-ui"
@@ -31,6 +31,7 @@ depends=(
   "libegl1"
   "libdbus-1-3"
   "libpango-1.0-0"
+  "libpangoft2-1.0-0"
   "libcap2"
 )
 
@@ -46,6 +47,7 @@ makedepends=(
   "libxcomposite-dev"
   "libxfixes-dev"
   "libxext-dev"
+  "libxrender-dev"
   "libxi-dev"
   "libxcursor-dev"
   "libwayland-dev"
@@ -56,11 +58,14 @@ makedepends=(
   "libpulse-dev"
   "libdrm-dev"
   "libdbus-1-dev"
+  "libglib2.0-dev"
+  "libgio-2.0-dev"
   "libpango1.0-dev"
   "libcap-dev"
+  "cmake"
 )
 
-source=("git+https://repo.dec05eba.com/gpu-screen-recorder-ui.git#commit=edfc70d99ba9adbce3f7e61642ac21ea1542e50f")
+source=("git+https://repo.dec05eba.com/gpu-screen-recorder-ui.git#commit=99c9da14757152423c6d9f8eae02963acfc24601")
 sha256sums=("SKIP")
 external_connection=true
 
