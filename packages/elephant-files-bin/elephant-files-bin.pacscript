@@ -7,7 +7,7 @@ bugs="https://github.com/abenz1267/elephant/issues"
 maintainer=("dbrugan <dbrugan@protonmail.com>")
 license=("GPL-3.0-or-later")
 arch=("amd64")
-depends=("elephant")
+pacdeps=("elephant-bin")
 source=("https://github.com/abenz1267/elephant/releases/download/v${pkgver}/files-linux-amd64.tar.gz")
 sha256sums=("1342d88da31610fdadb3c62445c033ca188a4bbcb17da992d1ef2ee0f23be9dc")
 
