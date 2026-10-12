@@ -1,0 +1,14 @@
+pkgbase = linuxtoys-deb
+	gives = linuxtoys
+	pkgver = 7.6.4
+	pkgrel = 1
+	pkgdesc = Collection of Linux toys in the spirit of bsdgames, with a user-friendly graphical interface
+	url = https://linux.toys
+	arch = amd64
+	license = GPL-3.0-only
+	maintainer = dbrugan <dbrugan@protonmail.com>
+	repology = project: linuxtoys
+	source = https://github.com/psygreg/linuxtoys/releases/download/7.6.4/linuxtoys_7.6.4-1_amd64.deb
+	sha256sums = cdd78ea75df061179965801eae8ca4839df5fdd503679079e0abbee53eef0346
+
+pkgname = linuxtoys-deb

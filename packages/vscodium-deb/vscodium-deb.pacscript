@@ -1,0 +1,13 @@
+pkgname="vscodium-deb"
+gives="codium"
+pkgver="1.135.06055"
+pkgrel="1"
+pkgdesc="Community-built binary of Visual Studio Code with OSS telemetry disabled"
+url="https://vscodium.com/"
+bugs="https://github.com/VSCodium/vscodium/issues"
+arch=("amd64")
+license=("MIT")
+repology=("project: vscodium")
+maintainer=("dbrugan <dbrugan@protonmail.com>")
+source=("https://github.com/VSCodium/vscodium/releases/download/${pkgver}/codium_${pkgver}_amd64.deb")
+sha256sums=("5f5c00a9da9d232e4c84e9eee68bbdeb4d8737462022626ce3bdb6948f3d8649")

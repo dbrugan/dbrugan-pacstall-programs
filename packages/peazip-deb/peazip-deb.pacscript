@@ -1,0 +1,13 @@
+pkgname="peazip-deb"
+gives="peazip"
+pkgver="11.3.0"
+pkgrel="1"
+pkgdesc="Free, efficient and flexible file archiver with excellent compression ratio"
+url="https://peazip.github.io"
+bugs="https://github.com/peazip/PeaZip/issues"
+arch=("amd64")
+license=("LGPL-3.0-or-later")
+repology=("project: peazip")
+maintainer=("dbrugan <dbrugan@protonmail.com>")
+source=("https://github.com/peazip/PeaZip/releases/download/${pkgver}/peazip_${pkgver}.LINUX.Qt6-1_amd64.deb")
+sha256sums=("825c1eb7ac207502a73d3486d0c9c264c4004bb8b6604af19cad5ce408b4ae22")
