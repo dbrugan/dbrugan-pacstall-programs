@@ -1,0 +1,13 @@
+pkgname="linuxtoys-deb"
+gives="linuxtoys"
+pkgver="7.6.4"
+pkgrel="1"
+pkgdesc="Collection of Linux toys in the spirit of bsdgames, with a user-friendly graphical interface"
+url="https://linux.toys"
+bugs="https://github.com/psygreg/linuxtoys/issues"
+arch=("amd64")
+license=("GPL-3.0-only")
+repology=("project: linuxtoys")
+maintainer=("dbrugan <dbrugan@protonmail.com>")
+source=("https://github.com/psygreg/linuxtoys/releases/download/${pkgver}/linuxtoys_${pkgver}-1_amd64.deb")
+sha256sums=("cdd78ea75df061179965801eae8ca4839df5fdd503679079e0abbee53eef0346")

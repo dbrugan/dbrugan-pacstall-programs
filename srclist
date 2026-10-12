@@ -387,6 +387,21 @@ pkgbase = limine
 
 pkgname = limine
 ---
+pkgbase = linuxtoys-deb
+	gives = linuxtoys
+	pkgver = 7.6.4
+	pkgrel = 1
+	pkgdesc = Collection of Linux toys in the spirit of bsdgames, with a user-friendly graphical interface
+	url = https://linux.toys
+	arch = amd64
+	license = GPL-3.0-only
+	maintainer = dbrugan <dbrugan@protonmail.com>
+	repology = project: linuxtoys
+	source = https://github.com/psygreg/linuxtoys/releases/download/7.6.4/linuxtoys_7.6.4-1_amd64.deb
+	sha256sums = cdd78ea75df061179965801eae8ca4839df5fdd503679079e0abbee53eef0346
+
+pkgname = linuxtoys-deb
+---
 pkgbase = localsend-deb
 	gives = localsend
 	pkgver = 1.18.2
@@ -416,6 +431,52 @@ pkgbase = obsidian-deb
 	sha256sums = 85b10dcba6edfc1c0460a6d18260cf31c30447a444bd858a6440b9c9c8806d25
 
 pkgname = obsidian-deb
+---
+pkgbase = onlyoffice-desktopeditors-deb
+	gives = onlyoffice-desktopeditors
+	pkgver = 9.4.0
+	pkgrel = 1
+	pkgdesc = Open-source office suite for documents, spreadsheets, presentations, and PDF editing
+	url = https://www.onlyoffice.com/download-desktop
+	arch = amd64
+	optdepends = onlyoffice-desktopeditors-help: Offline documentation and help files
+	license = AGPL-3.0-only
+	maintainer = dbrugan <dbrugan@protonmail.com>
+	repology = project: onlyoffice-desktopeditors
+	source = https://github.com/ONLYOFFICE/DesktopEditors/releases/download/v9.4.0/onlyoffice-desktopeditors_amd64.deb
+	sha256sums = 4271434e81be42b1559fd989d24bf6d413482f278dc6a5e328202a4fc1a18649
+
+pkgname = onlyoffice-desktopeditors-deb
+---
+pkgbase = opencode-bin
+	gives = opencode
+	pkgver = 1.19.0
+	pkgrel = 1
+	pkgdesc = Open source AI coding agent for the terminal
+	url = https://opencode.ai
+	arch = amd64
+	license = MIT
+	maintainer = dbrugan <dbrugan@protonmail.com>
+	repology = project: opencode
+	source = https://github.com/anomalyco/opencode/releases/download/v1.19.0/opencode-linux-x64.tar.gz
+	sha256sums = 7bb9e61ad6feacf2e89c10a6a2c1840e3de4220bb50ba1fc7110f31806076aec
+
+pkgname = opencode-bin
+---
+pkgbase = peazip-deb
+	gives = peazip
+	pkgver = 11.3.0
+	pkgrel = 1
+	pkgdesc = Free, efficient and flexible file archiver with excellent compression ratio
+	url = https://peazip.github.io
+	arch = amd64
+	license = LGPL-3.0-or-later
+	maintainer = dbrugan <dbrugan@protonmail.com>
+	repology = project: peazip
+	source = https://github.com/peazip/PeaZip/releases/download/11.3.0/peazip_11.3.0.LINUX.Qt6-1_amd64.deb
+	sha256sums = 825c1eb7ac207502a73d3486d0c9c264c4004bb8b6604af19cad5ce408b4ae22
+
+pkgname = peazip-deb
 ---
 pkgbase = pmbootstrap
 	pkgver = 3.11.1
@@ -599,6 +660,37 @@ pkgbase = ttf-jetbrains-mono-nerd
 	sha256sums = 04d5e8f903693f9dd13e16f867e994834e681eb3c72c0d337a770dcda09010cf
 
 pkgname = ttf-jetbrains-mono-nerd
+---
+pkgbase = videomass-deb
+	gives = videomass
+	pkgver = 6.1.22
+	pkgrel = 1
+	pkgdesc = Cross-platform GUI for FFmpeg featuring presets, profiles and batch operations
+	url = https://jeanslack.github.io/Videomass/
+	arch = all
+	optdepends = yt-dlp: Required for the YouTube Downloader panel
+	license = GPL-3.0-or-later
+	maintainer = dbrugan <dbrugan@protonmail.com>
+	repology = project: videomass
+	source = https://github.com/jeanslack/Videomass/releases/download/v6.1.22/videomass_6.1.22-1_all.deb
+	sha256sums = 53c95f94137c96a704958926f7663a249d6fce5d195061e1889c00a4d9147f2e
+
+pkgname = videomass-deb
+---
+pkgbase = vscodium-deb
+	gives = codium
+	pkgver = 1.135.06055
+	pkgrel = 1
+	pkgdesc = Community-built binary of Visual Studio Code with OSS telemetry disabled
+	url = https://vscodium.com/
+	arch = amd64
+	license = MIT
+	maintainer = dbrugan <dbrugan@protonmail.com>
+	repology = project: vscodium
+	source = https://github.com/VSCodium/vscodium/releases/download/1.135.06055/codium_1.135.06055_amd64.deb
+	sha256sums = 5f5c00a9da9d232e4c84e9eee68bbdeb4d8737462022626ce3bdb6948f3d8649
+
+pkgname = vscodium-deb
 ---
 pkgbase = walker-bin
 	gives = walker

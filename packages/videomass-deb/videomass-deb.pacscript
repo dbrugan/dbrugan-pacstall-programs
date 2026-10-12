@@ -1,0 +1,14 @@
+pkgname="videomass-deb"
+gives="videomass"
+pkgver="6.1.22"
+pkgrel="1"
+pkgdesc="Cross-platform GUI for FFmpeg featuring presets, profiles and batch operations"
+url="https://jeanslack.github.io/Videomass/"
+bugs="https://github.com/jeanslack/Videomass/issues"
+arch=("all")
+license=("GPL-3.0-or-later")
+repology=("project: videomass")
+maintainer=("dbrugan <dbrugan@protonmail.com>")
+source=("https://github.com/jeanslack/Videomass/releases/download/v${pkgver}/videomass_${pkgver}-1_all.deb")
+sha256sums=("53c95f94137c96a704958926f7663a249d6fce5d195061e1889c00a4d9147f2e")
+optdepends=("yt-dlp: Required for the YouTube Downloader panel")
