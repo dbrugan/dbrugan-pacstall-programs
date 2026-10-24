@@ -1,6 +1,6 @@
 pkgname="obsidian-deb"
 gives="obsidian"
-pkgver="1.14.4"
+pkgver="1.14.5"
 pkgrel="1"
 pkgdesc="Powerful and extensible knowledge base editor that uses markdown"
 url="https://obsidian.md"
@@ -10,4 +10,4 @@ license=("custom:LicenseRef-Proprietary")
 repology=("project: obsidian")
 maintainer=("dbrugan <dbrugan@protonmail.com>")
 source=("https://github.com/obsidianmd/obsidian-releases/releases/download/v${pkgver}/obsidian_${pkgver}_amd64.deb")
-sha256sums=("85b10dcba6edfc1c0460a6d18260cf31c30447a444bd858a6440b9c9c8806d25")
+sha256sums=("c37fb46a966f604823337fb36ab23bd1baf8ce912ec35af59d62358a93357bee")
