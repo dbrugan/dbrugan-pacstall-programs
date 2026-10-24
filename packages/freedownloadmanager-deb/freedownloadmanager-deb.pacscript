@@ -1,6 +1,6 @@
 pkgname="freedownloadmanager-deb"
 gives="freedownloadmanager"
-pkgver="6.35.0.7018"
+pkgver="6.35.2.7075"
 pkgrel="1"
 pkgdesc="Powerful modern download accelerator and organizer"
 url="https://www.freedownloadmanager.org"
@@ -10,4 +10,4 @@ license=("custom:LicenseRef-Proprietary")
 repology=("project: freedownloadmanager")
 maintainer=("dbrugan <dbrugan@protonmail.com>")
 source=("https://debrepo.freedownloadmanager.org/pool/main/f/freedownloadmanager/freedownloadmanager_${pkgver}_amd64.deb")
-sha256sums=("aecc4c0794685668e84968a3d5ef2477c531d0f9768d20f3cc5371d9b3b9f567")
+sha256sums=("802d7e7c3fadc040c09fc5c64a3af53096b0fa34227b11431a2f553a5b7353a9")
