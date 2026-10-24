@@ -27,6 +27,9 @@ external_connection=true
 
 prepare() {
   cd "hyprland-preview-share-picker"
+  # pacstall's git fetcher does not fetch tags; recreate the upstream tag so
+  # build.rs's `git describe --tags` (which panics on empty output) succeeds
+  git tag -f "v${pkgver}" HEAD 2> /dev/null || true
   git submodule update --init --recursive
 }
 
