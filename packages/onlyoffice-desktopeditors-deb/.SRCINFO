@@ -1,6 +1,6 @@
 pkgbase = onlyoffice-desktopeditors-deb
 	gives = onlyoffice-desktopeditors
-	pkgver = 9.4.0
+	pkgver = 10.0.0
 	pkgrel = 1
 	pkgdesc = Open-source office suite for documents, spreadsheets, presentations, and PDF editing
 	url = https://www.onlyoffice.com/download-desktop
@@ -9,7 +9,7 @@ pkgbase = onlyoffice-desktopeditors-deb
 	license = AGPL-3.0-only
 	maintainer = dbrugan <dbrugan@protonmail.com>
 	repology = project: onlyoffice-desktopeditors
-	source = https://github.com/ONLYOFFICE/DesktopEditors/releases/download/v9.4.0/onlyoffice-desktopeditors_amd64.deb
-	sha256sums = 4271434e81be42b1559fd989d24bf6d413482f278dc6a5e328202a4fc1a18649
+	source = https://github.com/ONLYOFFICE/DesktopEditors/releases/download/v10.0.0/onlyoffice-desktopeditors_amd64.deb
+	sha256sums = 2190edb4022a2ac2f6eee0f78815520f0e4ece1e8a1097c645a6f9b225c8b59c
 
 pkgname = onlyoffice-desktopeditors-deb
