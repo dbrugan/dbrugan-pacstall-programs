@@ -480,7 +480,7 @@ pkgname = opencode-bin
 ---
 pkgbase = peazip-deb
 	gives = peazip
-	pkgver = 11.3.0
+	pkgver = 11.4.0
 	pkgrel = 1
 	pkgdesc = Free, efficient and flexible file archiver with excellent compression ratio
 	url = https://peazip.github.io
@@ -488,8 +488,8 @@ pkgbase = peazip-deb
 	license = LGPL-3.0-or-later
 	maintainer = dbrugan <dbrugan@protonmail.com>
 	repology = project: peazip
-	source = https://github.com/peazip/PeaZip/releases/download/11.3.0/peazip_11.3.0.LINUX.Qt6-1_amd64.deb
-	sha256sums = 825c1eb7ac207502a73d3486d0c9c264c4004bb8b6604af19cad5ce408b4ae22
+	source = https://github.com/peazip/PeaZip/releases/download/11.4.0/peazip_11.4.0.LINUX.Qt6-1_amd64.deb
+	sha256sums = d63dfeeeca7f5d78144c9d6f0921ed11c584b8c6b6e6d2e48c33ae767656dff6
 
 pkgname = peazip-deb
 ---
