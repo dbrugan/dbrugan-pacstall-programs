@@ -1,5 +1,5 @@
 pkgbase = hyprland-preview-share-picker
-	pkgver = 0.2.1
+	pkgver = 0.3.0
 	pkgrel = 1
 	pkgdesc = An alternative share picker for hyprland with window and monitor previews
 	url = https://github.com/WhySoBad/hyprland-preview-share-picker
@@ -18,7 +18,7 @@ pkgbase = hyprland-preview-share-picker
 	suggests = slurp
 	license = MIT
 	maintainer = dbrugan <dbrugan@protonmail.com>
-	source = git+https://github.com/WhySoBad/hyprland-preview-share-picker.git#commit=211b7890ed3332f4d1bb1f1a96999e18874a9c3c
+	source = git+https://github.com/WhySoBad/hyprland-preview-share-picker.git#commit=7e11349d3f6ecae75b42be73d6a258503656cc8f
 	sha256sums = SKIP
 
 pkgname = hyprland-preview-share-picker

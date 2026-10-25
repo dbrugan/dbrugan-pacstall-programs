@@ -1,6 +1,6 @@
 pkgname="telegram-bin"
 gives="telegram"
-pkgver="7.3.0"
+pkgver="7.3.3"
 pkgrel="1"
 pkgdesc="Official Telegram Desktop client - static binaries installed to /opt/Telegram with working in-app self-updater"
 arch=("amd64")
@@ -28,7 +28,7 @@ sha256sums=(
   "731431e47a5bc91c697d25c3a54fe7ba004752f5b66e0f282c47588ff7a314e6"
   "3fb1400c7dc9bbc3b5cb3ffedcbf4a9b09c53e28b57a7ff33a8a6b9048864090"
   "e297771c75bd2f81d637a3234f83568be62092f67d16946be23895fa92fa7119"
-  "6c2fe0e02505a36a2522e3ba36371819a3a443ac289a5ac1dd3793de37925351"
+  "7bcd524ea17f3eefda95b2ffdb3d5b355e7f727d44045a6ff2316cd077355df9"
 )
 
 package() {

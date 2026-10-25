@@ -1,5 +1,5 @@
 pkgname="gpu-screen-recorder-ui"
-pkgver="1.13.10"
+pkgver="1.14.1"
 pkgrel="1"
 pkgdesc="A fullscreen overlay UI for GPU Screen Recorder in the style of ShadowPlay"
 url="https://git.dec05eba.com/gpu-screen-recorder-ui"
@@ -65,7 +65,7 @@ makedepends=(
   "cmake"
 )
 
-source=("git+https://repo.dec05eba.com/gpu-screen-recorder-ui.git#commit=99c9da14757152423c6d9f8eae02963acfc24601")
+source=("git+https://repo.dec05eba.com/gpu-screen-recorder-ui.git#commit=10b0126aad5b6ae54888497cef34af5cf5d51a52")
 sha256sums=("SKIP")
 external_connection=true
 

@@ -1,5 +1,5 @@
 pkgname="hyprland-preview-share-picker"
-pkgver="0.2.1"
+pkgver="0.3.0"
 pkgrel="1"
 pkgdesc="An alternative share picker for hyprland with window and monitor previews"
 url="https://github.com/WhySoBad/hyprland-preview-share-picker"
@@ -21,12 +21,15 @@ makedepends=(
   "libwayland-dev"
 )
 suggests=("hyprland" "xdg-desktop-portal-hyprland" "slurp")
-source=("git+https://github.com/WhySoBad/hyprland-preview-share-picker.git#commit=211b7890ed3332f4d1bb1f1a96999e18874a9c3c")
+source=("git+https://github.com/WhySoBad/hyprland-preview-share-picker.git#commit=7e11349d3f6ecae75b42be73d6a258503656cc8f")
 sha256sums=("SKIP")
 external_connection=true
 
 prepare() {
   cd "hyprland-preview-share-picker"
+  # pacstall's git fetcher does not fetch tags; recreate the upstream tag so
+  # build.rs's `git describe --tags` (which panics on empty output) succeeds
+  git tag -f "v${pkgver}" HEAD 2> /dev/null || true
   git submodule update --init --recursive
 }
 

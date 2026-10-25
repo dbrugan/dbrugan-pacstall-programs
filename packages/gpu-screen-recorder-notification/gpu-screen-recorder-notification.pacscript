@@ -1,6 +1,6 @@
 pkgname="gpu-screen-recorder-notification"
 gives="gsr-notify"
-pkgver="1.3.6"
+pkgver="1.3.7"
 pkgrel="1"
 pkgdesc="Notification component for GPU Screen Recorder"
 url="https://git.dec05eba.com/gpu-screen-recorder-notification"
@@ -40,7 +40,7 @@ makedepends=(
   "libpango1.0-dev"
 )
 
-source=("git+https://repo.dec05eba.com/gpu-screen-recorder-notification.git#commit=54bc6c8f139a5ff4025a4585d01c9e3f23894b72")
+source=("git+https://repo.dec05eba.com/gpu-screen-recorder-notification.git#commit=4b6701400142fc63c56a2e6617aaff017bd5d3c3")
 sha256sums=("SKIP")
 external_connection=true
 

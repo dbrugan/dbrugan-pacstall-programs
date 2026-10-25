@@ -1,5 +1,5 @@
 pkgname="limine"
-pkgver="12.9.3"
+pkgver="12.9.4"
 pkgrel="1"
 pkgdesc="Modern, secure, portable, multiprotocol bootloader and boot manager"
 url="https://github.com/Limine-Bootloader/Limine"
@@ -14,7 +14,7 @@ makedepends=(
 )
 
 source=("https://github.com/Limine-Bootloader/Limine/releases/download/v${pkgver}/limine-binary.tar.xz")
-sha256sums=("e02a473c6dc6df25159697f94930272397f21fd86e5d4eeee61bba72c95ec8d2")
+sha256sums=("9880cc04681262214db9b824ed8a5c55296955027d8caa9f55ab52a6dd85d6a0")
 
 build() {
   cd "limine-binary"
