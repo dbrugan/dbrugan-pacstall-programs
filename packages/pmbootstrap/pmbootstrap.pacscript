@@ -1,6 +1,6 @@
 pkgname="pmbootstrap"
 pkgver="3.12.1"
-pkgrel="1"
+pkgrel="2"
 pkgdesc="A sophisticated chroot/build/flash tool to develop and install postmarketOS"
 url="https://gitlab.postmarketos.org/postmarketOS/pmbootstrap"
 bugs="https://gitlab.postmarketos.org/postmarketOS/pmbootstrap/-/issues"
@@ -15,7 +15,7 @@ sha256sums=("1a097b09eec2ceafe224fd2d76eda88e8a7280911b3d17497c096e521c4cdf7a")
 
 build() {
   cd "pmbootstrap-${pkgver}"
-  python3 -m pip install --no-build-isolation --no-deps --root-user-action=ignore --prefix=/usr --root="${PWD}/stage" .
+  python3 -m pip install --no-build-isolation --no-deps --ignore-installed --root-user-action=ignore --prefix=/usr --root="${PWD}/stage" .
 }
 
 package() {

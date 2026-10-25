@@ -495,7 +495,7 @@ pkgname = peazip-deb
 ---
 pkgbase = pmbootstrap
 	pkgver = 3.12.1
-	pkgrel = 1
+	pkgrel = 2
 	pkgdesc = A sophisticated chroot/build/flash tool to develop and install postmarketOS
 	url = https://gitlab.postmarketos.org/postmarketOS/pmbootstrap
 	arch = all
