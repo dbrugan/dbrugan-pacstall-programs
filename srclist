@@ -1,6 +1,21 @@
 ### Auto-generated for pacstall-programs
 ### DO NOT EDIT. Use scripts/srcinfo.sh to build.
 ---
+pkgbase = anydesk-deb
+	gives = anydesk
+	pkgver = 8.1.0
+	pkgrel = 1
+	pkgdesc = Remote desktop software focused on fast, low-latency connections
+	url = https://anydesk.com
+	arch = amd64
+	license = custom:LicenseRef-Proprietary
+	maintainer = dbrugan <dbrugan@protonmail.com>
+	repology = project: anydesk
+	source = https://download.anydesk.com/linux/anydesk_8.1.0-1_amd64.deb
+	sha256sums = 77860cc3f6a0b3c5cf0ff21f764c0bcdd112a61255a6a225004aee6b0d9a2c1e
+
+pkgname = anydesk-deb
+---
 pkgbase = caligula-bin
 	gives = caligula
 	pkgver = 0.5.0
@@ -465,7 +480,7 @@ pkgname = onlyoffice-desktopeditors-deb
 ---
 pkgbase = opencode-bin
 	gives = opencode
-	pkgver = 1.19.4
+	pkgver = 2.2.3
 	pkgrel = 1
 	pkgdesc = Open source AI coding agent for the terminal
 	url = https://opencode.ai
@@ -473,8 +488,8 @@ pkgbase = opencode-bin
 	license = MIT
 	maintainer = dbrugan <dbrugan@protonmail.com>
 	repology = project: opencode
-	source = https://github.com/anomalyco/opencode/releases/download/v1.19.4/opencode-linux-x64.tar.gz
-	sha256sums = 849bd6b3d959a1d2ef200ed1634a51c79a45ca236aa26665d75debd694805cce
+	source = https://github.com/anomalyco/opencode/releases/download/v2.2.3/opencode-linux-x64.tar.gz
+	sha256sums = ef3aeeaf5522b10d69a3da7bbd6e6d8d259f845833d96b8310767d3407b18a35
 
 pkgname = opencode-bin
 ---
@@ -607,6 +622,21 @@ pkgbase = quickshell
 	sha256sums = 946a27e2a276917a03c1079e5c60971af84ece73088c3661dee455d92eb420f7
 
 pkgname = quickshell
+---
+pkgbase = rustdesk-deb
+	gives = rustdesk
+	pkgver = 1.5.0
+	pkgrel = 1
+	pkgdesc = Open source virtual/remote desktop infrastructure, an alternative to TeamViewer
+	url = https://rustdesk.com
+	arch = amd64
+	license = GPL-3.0-only
+	maintainer = dbrugan <dbrugan@protonmail.com>
+	repology = project: rustdesk
+	source = https://github.com/rustdesk/rustdesk/releases/download/1.5.0/rustdesk-1.5.0-x86_64.deb
+	sha256sums = 4e2b9701d25a7ef373f3d09bda584a37d6902f97a6ab15f2e86d4a5783e2a0ec
+
+pkgname = rustdesk-deb
 ---
 pkgbase = satty-bin
 	gives = satty
