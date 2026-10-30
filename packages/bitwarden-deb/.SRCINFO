@@ -1,0 +1,14 @@
+pkgbase = bitwarden-deb
+	gives = bitwarden
+	pkgver = 2026.10.2
+	pkgrel = 1
+	pkgdesc = Free and open source password manager for securing all of your accounts
+	url = https://bitwarden.com
+	arch = amd64
+	license = GPL-3
+	maintainer = dbrugan <dbrugan@protonmail.com>
+	repology = project: bitwarden
+	source = https://github.com/bitwarden/clients/releases/download/desktop-v2026.10.2/Bitwarden-2026.10.2-amd64.deb
+	sha256sums = 72c9ff6c45b8c8d803a4e4102f2884d6f579f329801a8953921c118737d92bc0
+
+pkgname = bitwarden-deb
