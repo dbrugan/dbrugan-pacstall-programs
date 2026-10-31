@@ -1,0 +1,21 @@
+pkgbase = reaper
+	gives = reaper
+	pkgver = 7.84
+	pkgrel = 1
+	pkgdesc = Complete digital audio production application for recording, editing, mixing and mastering
+	url = https://reaper.fm
+	arch = amd64
+	depends = libasound2
+	depends = libx11-6
+	depends = libxi6
+	depends = libgl1
+	depends = libfontconfig1
+	optdepends = jackd2: JACK audio backend
+	optdepends = pulseaudio: PulseAudio audio backend
+	license = custom:Cockos
+	maintainer = dbrugan <dbrugan@protonmail.com>
+	repology = reaper
+	source = https://www.reaper.fm/files/7.x/reaper784_linux_x86_64.tar.xz
+	sha256sums = d87b39862bec6a82bbb530731ae1fa36bba4bc9954ff72518a187420eed9ec7d
+
+pkgname = reaper
