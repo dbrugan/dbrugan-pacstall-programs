@@ -15,6 +15,7 @@ depends=(
   "libgl1"
   "libfontconfig1"
 )
+makedepends=("xdg-utils")
 optdepends=(
   "jackd2: JACK audio backend"
   "pulseaudio: PulseAudio audio backend"

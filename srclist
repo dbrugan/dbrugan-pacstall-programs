@@ -620,6 +620,7 @@ pkgbase = reaper
 	depends = libxi6
 	depends = libgl1
 	depends = libfontconfig1
+	makedepends = xdg-utils
 	optdepends = jackd2: JACK audio backend
 	optdepends = pulseaudio: PulseAudio audio backend
 	license = custom:Cockos
