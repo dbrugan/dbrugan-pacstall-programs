@@ -1,0 +1,12 @@
+pkgname="anydesk-deb"
+gives="anydesk"
+pkgver="8.1.0"
+pkgrel="1"
+pkgdesc="Remote desktop software focused on fast, low-latency connections"
+url="https://anydesk.com"
+arch=("amd64")
+license=("custom:LicenseRef-Proprietary")
+maintainer=("dbrugan <dbrugan@protonmail.com>")
+repology=("project: anydesk")
+source=("https://download.anydesk.com/linux/anydesk_${pkgver}-1_amd64.deb")
+sha256sums=("77860cc3f6a0b3c5cf0ff21f764c0bcdd112a61255a6a225004aee6b0d9a2c1e")

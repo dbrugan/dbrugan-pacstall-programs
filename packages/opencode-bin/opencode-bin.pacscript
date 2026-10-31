@@ -1,6 +1,6 @@
 pkgname="opencode-bin"
 gives="opencode"
-pkgver="1.19.4"
+pkgver="2.2.3"
 pkgrel="1"
 pkgdesc="Open source AI coding agent for the terminal"
 url="https://opencode.ai"
@@ -10,7 +10,7 @@ license=("MIT")
 repology=("project: opencode")
 maintainer=("dbrugan <dbrugan@protonmail.com>")
 source=("https://github.com/anomalyco/opencode/releases/download/v${pkgver}/opencode-linux-x64.tar.gz")
-sha256sums=("849bd6b3d959a1d2ef200ed1634a51c79a45ca236aa26665d75debd694805cce")
+sha256sums=("ef3aeeaf5522b10d69a3da7bbd6e6d8d259f845833d96b8310767d3407b18a35")
 
 package() {
   install -Dm755 "${srcdir}/opencode" "${pkgdir}/usr/bin/opencode"

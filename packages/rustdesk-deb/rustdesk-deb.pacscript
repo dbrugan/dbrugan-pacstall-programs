@@ -1,0 +1,13 @@
+pkgname="rustdesk-deb"
+gives="rustdesk"
+pkgver="1.5.0"
+pkgrel="1"
+pkgdesc="Open source virtual/remote desktop infrastructure, an alternative to TeamViewer"
+url="https://rustdesk.com"
+bugs="https://github.com/rustdesk/rustdesk/issues"
+arch=("amd64")
+license=("GPL-3.0-only")
+maintainer=("dbrugan <dbrugan@protonmail.com>")
+repology=("project: rustdesk")
+source=("https://github.com/rustdesk/rustdesk/releases/download/${pkgver}/rustdesk-${pkgver}-x86_64.deb")
+sha256sums=("4e2b9701d25a7ef373f3d09bda584a37d6902f97a6ab15f2e86d4a5783e2a0ec")

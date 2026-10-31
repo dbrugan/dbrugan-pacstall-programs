@@ -91,8 +91,10 @@ jobs:
             iputils-ping \
             keyboard-configuration \
             lsb-release \
+            menu \
             sudo \
-            wget
+            wget \
+            xdg-utils
 
           ln -fs /usr/share/zoneinfo/Africa/Libreville /etc/localtime
 
