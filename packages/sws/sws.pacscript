@@ -8,7 +8,6 @@ license=("MIT")
 maintainer=("dbrugan <dbrugan@protonmail.com>")
 repology=("sws")
 depends=(
-  "reaper"
   "libgcc-s1"
   "libstdc++6"
 )
