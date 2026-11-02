@@ -1,0 +1,15 @@
+pkgbase = sws
+	pkgver = 2.14.0.7
+	pkgrel = 1
+	pkgdesc = SWS/S&M extension collection for the REAPER digital audio workstation
+	url = https://sws-extension.org
+	arch = amd64
+	depends = libgcc-s1
+	depends = libstdc++6
+	license = MIT
+	maintainer = dbrugan <dbrugan@protonmail.com>
+	repology = sws
+	source = https://github.com/reaper-oss/sws/releases/download/v2.14.0.7/reaper_sws-x86_64.so
+	sha256sums = 4cf0629aeeff346c1ed9a355ce826febfacf9775bd6f49f09b1b4f9f053b8644
+
+pkgname = sws

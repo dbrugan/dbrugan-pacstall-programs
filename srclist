@@ -638,6 +638,25 @@ pkgbase = quickshell
 
 pkgname = quickshell
 ---
+pkgbase = reapack
+	pkgver = 1.2.6
+	pkgrel = 1
+	pkgdesc = Package manager for the REAPER digital audio workstation
+	url = https://reapack.com
+	arch = amd64
+	depends = libcurl4t64
+	depends = libgcc-s1
+	depends = libstdc++6
+	depends = libssl3t64
+	depends = zlib1g
+	license = LGPL-3.0-or-later
+	maintainer = dbrugan <dbrugan@protonmail.com>
+	repology = reapack
+	source = https://github.com/cfillion/reapack/releases/download/v1.2.6/reaper_reapack-x86_64.so
+	sha256sums = 35d80f63d8174c964af589c7d87c4728aa18f06899dce873e33f8d552d1bc7e0
+
+pkgname = reapack
+---
 pkgbase = reaper
 	gives = reaper
 	pkgver = 7.84
@@ -651,8 +670,10 @@ pkgbase = reaper
 	depends = libgl1
 	depends = libfontconfig1
 	makedepends = xdg-utils
+	optdepends = ffmpeg: for video rendering
 	optdepends = jackd2: JACK audio backend
 	optdepends = pulseaudio: PulseAudio audio backend
+	optdepends = python3: for Python plugins
 	license = custom:Cockos
 	maintainer = dbrugan <dbrugan@protonmail.com>
 	repology = reaper
@@ -697,6 +718,22 @@ pkgbase = satty-bin
 	sha256sums = eb7a028c4a5ce331c2f355add8e2b807a7d697fe4495f7e1965786a4f6bcd5b8
 
 pkgname = satty-bin
+---
+pkgbase = sws
+	pkgver = 2.14.0.7
+	pkgrel = 1
+	pkgdesc = SWS/S&M extension collection for the REAPER digital audio workstation
+	url = https://sws-extension.org
+	arch = amd64
+	depends = libgcc-s1
+	depends = libstdc++6
+	license = MIT
+	maintainer = dbrugan <dbrugan@protonmail.com>
+	repology = sws
+	source = https://github.com/reaper-oss/sws/releases/download/v2.14.0.7/reaper_sws-x86_64.so
+	sha256sums = 4cf0629aeeff346c1ed9a355ce826febfacf9775bd6f49f09b1b4f9f053b8644
+
+pkgname = sws
 ---
 pkgbase = telegram-bin
 	gives = telegram
