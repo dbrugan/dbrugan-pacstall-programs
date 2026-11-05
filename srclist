@@ -462,6 +462,21 @@ pkgbase = localsend-deb
 
 pkgname = localsend-deb
 ---
+pkgbase = neovim
+	pkgver = 0.12.6
+	pkgdesc = Vim-fork focused on extensibility and usability
+	url = https://neovim.io/
+	arch = amd64
+	replaces = neovim
+	replaces = neovim-git
+	replaces = nvim
+	replaces = neovim-runtime
+	maintainer = dbrugan <dbrugan@protonmail.com>
+	source = https://github.com/neovim/neovim/releases/download/v0.12.6/nvim-linux-x86_64.tar.gz
+	sha256sums = 474430d53e6264f6d6dd18db42d6dc9df3a1b56ca9e88a325bbf860e1a811d87
+
+pkgname = neovim
+---
 pkgbase = obsidian-deb
 	gives = obsidian
 	pkgver = 1.14.5
