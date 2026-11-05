@@ -3,22 +3,20 @@ arch=("amd64")
 pkgver="0.12.6"
 source=("https://github.com/neovim/neovim/releases/download/v${pkgver}/nvim-linux-x86_64.tar.gz")
 url="https://neovim.io/"
-makedepends=("gettext" "libtool" "libtool-bin" "autoconf" "automake" "cmake" "g++" "pkg-config")
 replaces=("neovim" "neovim-git" "nvim" "neovim-runtime")
 pkgdesc="Vim-fork focused on extensibility and usability"
 sha256sums=("474430d53e6264f6d6dd18db42d6dc9df3a1b56ca9e88a325bbf860e1a811d87")
 maintainer=("dbrugan <dbrugan@protonmail.com>")
 
-build() {
-  cd "${pkgname}-${pkgver}"
-  make CMAKE_BUILD_TYPE=Release CMAKE_INSTALL_PREFIX=/usr -j"${NCPU}"
-}
-
 package() {
-  cd "${pkgname}-${pkgver}"
-  make install DESTDIR="${pkgdir}"
-  install -Dm644 "LICENSE.txt" -t "${pkgdir}/usr/share/licenses/${pkgname}"
-  install -Dm644 "README.md" -t "${pkgdir}/usr/share/doc/${pkgname}"
+  install -d "${pkgdir}/usr"
+  cp -a "${srcdir}/nvim-linux-x86_64/bin" "${pkgdir}/usr/"
+  cp -a "${srcdir}/nvim-linux-x86_64/lib" "${pkgdir}/usr/"
+  cp -a "${srcdir}/nvim-linux-x86_64/share" "${pkgdir}/usr/"
+  install -Dm644 "${srcdir}/nvim-linux-x86_64/LICENSE.txt" \
+    -t "${pkgdir}/usr/share/licenses/${pkgname}"
+  install -Dm644 "${srcdir}/nvim-linux-x86_64/README.md" \
+    -t "${pkgdir}/usr/share/doc/${pkgname}"
   install -Dm755 /dev/stdin "${pkgdir}/usr/libexec/${pkgname}/ex" << 'EOF'
 #!/bin/sh
 exec /usr/bin/nvim -e "$@"
