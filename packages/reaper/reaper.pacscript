@@ -16,11 +16,6 @@ depends=(
   "libfontconfig1"
 )
 makedepends=("xdg-utils")
-# Note: optdepends on pacstall packages (reapack, sws) is intentionally not
-# listed. Applying -Qa from a PR processes packages alphabetically, so they
-# install before reaper and pacstall's deb builder promotes optdepends on
-# installed pacstall packages to hard Depends, which breaks CI's dep-tree
-# uninstall phase. Install reapack/sws separately.
 optdepends=(
   "ffmpeg: for video rendering"
   "jackd2: JACK audio backend"
@@ -60,5 +55,5 @@ package() {
 
 post_install() {
   echo "REAPER installed to /opt/REAPER. Free 60-day evaluation continues with your own license."
-  echo "Install reapack (plugin manager) and/or sws (SWS/S&M extension) for plugins; both install to /opt/REAPER/UserPlugins."
+  echo "ReaPack and SWS extensions are not packaged; drop their .so files into ~/.config/REAPER/UserPlugins and restart REAPER."
 }
