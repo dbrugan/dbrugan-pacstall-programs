@@ -12,7 +12,7 @@ depends=(
   "bash"
   "btrfs-progs"
   "coreutils"
-  "libnotify"
+  "libnotify-bin"
   "procps"
   "sed"
   "snapper"
