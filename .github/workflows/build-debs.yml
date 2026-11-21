@@ -92,6 +92,9 @@ jobs:
           fi
           echo "deb=${debs[0]}" >> "$GITHUB_OUTPUT"
           dpkg-deb -f "${debs[0]}" Package Version Architecture Installed-Size Depends
+          # Logged here as well as in the run summary, so a failed release job
+          # still leaves the hash in the build log.
+          sha256sum "${debs[0]}"
 
       - name: Check ABI floor
         id: abi
@@ -115,6 +118,12 @@ jobs:
           else
             echo "Max GLIBC symbol version required: ${floor}"
           fi
+          echo "Required shared libraries:"
+          while IFS= read -r -d '' f; do
+            [[ "$(file -b "$f")" == ELF* ]] || continue
+            readelf -d "$f" 2> /dev/null \
+              | sed -n 's/.*(NEEDED).*\[\(.*\)\]/  \1/p'
+          done < <(find unpack -type f -print0) | sort -u
 
       - name: Compare ABI floor with pacscript
         env:
@@ -178,17 +187,54 @@ jobs:
     name: test (ubuntu:26.04)
     needs: [build]
     runs-on: ubuntu-26.04
-    container: ubuntu:26.04
+    container:
+      image: ubuntu:26.04
+      options: --privileged
+      env:
+        DEBIAN_FRONTEND: noninteractive
     steps:
+      - name: Install prerequisite tools
+        run: |
+          set -euo pipefail
+          apt-get update
+          apt-get install -y --no-install-recommends \
+            ca-certificates curl git lsb-release sudo
+
+      - uses: actions/checkout@v7
+
       - uses: actions/download-artifact@v4
         with:
           name: deb
           path: dist
 
+      - name: Install pacstall
+        run: |
+          set -euo pipefail
+          curl -fsSL 'https://pacstall.dev/q/install?dnt' -o pacstall-install.sh
+          chmod +x pacstall-install.sh
+          printf 'N\n' | ./pacstall-install.sh
+
+      - name: Install pacstall-only dependencies
+        env:
+          RECIPE: ${{ inputs.recipe }}
+        run: |
+          set -euo pipefail
+          # Any pacdeps in the recipe are pacstall packages: apt on its own
+          # can never satisfy them in a clean rootfs. Install them from this repo
+          # the same way a user would.
+          # shellcheck disable=SC1090
+          source "recipes/${RECIPE}/${RECIPE}.pacscript"
+          if [[ -n "${pacdeps[*]:-}" ]]; then
+            sudo DISABLE_PROMPTS=1 pacstall -A "$GITHUB_WORKSPACE"
+            for dep in "${pacdeps[@]}"; do
+              echo "Installing pacdep: ${dep}"
+              sudo DISABLE_PROMPTS=1 pacstall -Ns -I "$dep"
+            done
+          fi
+
       - name: Install in a clean rootfs
         run: |
           set -euo pipefail
-          apt-get update
           pkg="$(dpkg-deb -f dist/*.deb Package)"
           apt-get install -y ./dist/*.deb
           dpkg -s "$pkg" | grep -E '^(Package|Version|Depends):'
@@ -206,6 +252,8 @@ jobs:
           path: dist
 
       - name: Verify pacscript pins this artifact
+        env:
+          RECIPE: ${{ needs.build.outputs.recipe }}
         run: |
           set -euo pipefail
           cd dist
@@ -213,7 +261,11 @@ jobs:
           cat SHA256SUMS
           hash="$(cut -d' ' -f1 SHA256SUMS)"
           cd "$GITHUB_WORKSPACE"
-          pinned="$(grep -rhoE '"[0-9a-f]{64}"' packages/*-deb/*.pacscript | tr -d '"' | head -1 || true)"
+          pinfile="packages/${RECIPE}-deb/${RECIPE}-deb.pacscript"
+          pinned=""
+          if [[ -f "$pinfile" ]]; then
+            pinned="$(grep -hoE '"[0-9a-f]{64}"' "$pinfile" | tr -d '"' | head -1 || true)"
+          fi
           if [[ -z "$pinned" ]]; then
             echo "::warning::no pinned sha256 yet; update the pacscript after this release"
           elif [[ "$pinned" != "$hash" ]]; then
