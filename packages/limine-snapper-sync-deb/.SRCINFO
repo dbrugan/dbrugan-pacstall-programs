@@ -1,0 +1,29 @@
+pkgbase = limine-snapper-sync-deb
+	gives = limine-snapper-sync
+	pkgver = 1.32.1
+	pkgrel = 1
+	pkgdesc = Synchronizes Limine boot entries with Snapper Btrfs snapshots
+	url = https://gitlab.com/Zesko/limine-snapper-sync
+	arch = amd64
+	depends = bash
+	depends = btrfs-progs
+	depends = coreutils
+	depends = libc6>=2.43
+	depends = libnotify-bin
+	depends = procps
+	depends = sed
+	depends = snapper
+	depends = systemd
+	depends = util-linux
+	depends = zlib1g
+	optdepends = inotify-tools: Watches snapshot creation/deletion (otherwise the Snapper plugin drives syncs)
+	optdepends = rsync: Needed for RESTORE_METHOD=rsync
+	optdepends = xxhash: Faster xxhsum hashing for deduplication
+	optdepends = b3sum: Blake3 hashing for deduplication
+	pacdeps = limine
+	license = GPL-3.0-or-later
+	maintainer = dbrugan <dbrugan@protonmail.com>
+	source = https://github.com/dbrugan/dbrugan-pacstall-programs/releases/download/limine-snapper-sync-1.32.1/limine-snapper-sync_1.32.1-pacstall1_amd64.deb
+	sha256sums = SKIP
+
+pkgname = limine-snapper-sync-deb
