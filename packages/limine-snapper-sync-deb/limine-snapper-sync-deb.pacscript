@@ -11,18 +11,12 @@ license=("GPL-3.0-or-later")
 
 # This package installs a prebuilt deb produced by
 # .github/workflows/build-debs.yml from recipes/limine-snapper-sync. The build
-# runs on Ubuntu 26.04 (resolute), so the artifact needs a matching glibc.
-#
-# TODO: after the first `build-debs` run, replace SKIP with the published
-# sha256 and relax libc6 to the ABI floor reported in the run summary. Both
-# values are printed by the workflow and enforced on later runs. Once this
-# package is published, drop packages/limine-snapper-sync/ (the source recipe
-# lives on in recipes/) so only one package provides limine-snapper-sync.
+# runs on Ubuntu 26.04 (resolute), requiring glibc >= 2.34.
 depends=(
   "bash"
   "btrfs-progs"
   "coreutils"
-  "libc6>=2.43"
+  "libc6>=2.34"
   "libnotify-bin"
   "procps"
   "sed"
@@ -42,4 +36,4 @@ optdepends=(
 )
 
 source=("https://github.com/dbrugan/dbrugan-pacstall-programs/releases/download/limine-snapper-sync-${pkgver}/limine-snapper-sync_${pkgver}-pacstall${pkgrel}_amd64.deb")
-sha256sums=("SKIP")
+sha256sums=("85b090a6b5e8545b0637258018197bbabc4160692d78ced9ced16cbe76e10378")

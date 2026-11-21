@@ -8,7 +8,7 @@ pkgbase = limine-snapper-sync-deb
 	depends = bash
 	depends = btrfs-progs
 	depends = coreutils
-	depends = libc6>=2.43
+	depends = libc6>=2.34
 	depends = libnotify-bin
 	depends = procps
 	depends = sed
@@ -24,6 +24,6 @@ pkgbase = limine-snapper-sync-deb
 	license = GPL-3.0-or-later
 	maintainer = dbrugan <dbrugan@protonmail.com>
 	source = https://github.com/dbrugan/dbrugan-pacstall-programs/releases/download/limine-snapper-sync-1.32.1/limine-snapper-sync_1.32.1-pacstall1_amd64.deb
-	sha256sums = SKIP
+	sha256sums = 85b090a6b5e8545b0637258018197bbabc4160692d78ced9ced16cbe76e10378
 
 pkgname = limine-snapper-sync-deb
