@@ -11,20 +11,14 @@ license=("GPL-3.0-or-later")
 
 # This package installs a prebuilt deb produced by
 # .github/workflows/build-debs.yml from recipes/limine-entry-tool. The build
-# runs on Ubuntu 26.04 (resolute), so the artifact needs a matching glibc.
-#
-# TODO: after the first `build-debs` run, replace SKIP with the published
-# sha256 and relax libc6 to the ABI floor reported in the run summary. Both
-# values are printed by the workflow and enforced on later runs. Once this
-# package is published, drop packages/limine-entry-tool/ (the source recipe
-# lives on in recipes/) so only one package provides limine-entry-tool.
+# runs on Ubuntu 26.04 (resolute), requiring glibc >= 2.34.
 depends=(
   "bash"
   "coreutils"
   "efibootmgr"
   "gawk"
   "grep"
-  "libc6>=2.43"
+  "libc6>=2.34"
   "sed"
   "tar"
   "util-linux"
@@ -34,4 +28,4 @@ depends=(
 pacdeps=("limine")
 
 source=("https://github.com/dbrugan/dbrugan-pacstall-programs/releases/download/limine-entry-tool-${pkgver}/limine-entry-tool_${pkgver}-pacstall${pkgrel}_amd64.deb")
-sha256sums=("SKIP")
+sha256sums=("67f269be34fc3d5b5e6707a12b75fa572938cb764aa2ce0e2238971f87afe715")

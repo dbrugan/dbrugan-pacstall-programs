@@ -10,7 +10,7 @@ pkgbase = limine-entry-tool-deb
 	depends = efibootmgr
 	depends = gawk
 	depends = grep
-	depends = libc6>=2.43
+	depends = libc6>=2.34
 	depends = sed
 	depends = tar
 	depends = util-linux
@@ -19,6 +19,6 @@ pkgbase = limine-entry-tool-deb
 	license = GPL-3.0-or-later
 	maintainer = dbrugan <dbrugan@protonmail.com>
 	source = https://github.com/dbrugan/dbrugan-pacstall-programs/releases/download/limine-entry-tool-1.40.0/limine-entry-tool_1.40.0-pacstall1_amd64.deb
-	sha256sums = SKIP
+	sha256sums = 67f269be34fc3d5b5e6707a12b75fa572938cb764aa2ce0e2238971f87afe715
 
 pkgname = limine-entry-tool-deb
