@@ -9,8 +9,11 @@ elephant-providerlist-bin
 elephant-runner-bin
 freedownloadmanager-deb
 gpu-screen-recorder
+gpu-screen-recorder-deb
 gpu-screen-recorder-notification
+gpu-screen-recorder-notification-deb
 gpu-screen-recorder-ui
+gpu-screen-recorder-ui-deb
 hyprland-preview-share-picker
 lazydocker-bin
 limine
