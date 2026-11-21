@@ -46,17 +46,38 @@ jobs:
       - name: Install pacstall
         run: sudo bash -c "$(curl -fsSL https://pacstall.dev/q/install)"
 
+      - name: Add local repo
+        run: |
+          set -euo pipefail
+          # pacdeps in the recipe must resolve, so expose the checkout as a repo.
+          # `sudo -E` is refused by the runner's sudo policy, so pass the env
+          # explicitly for every pacstall call.
+          sudo DISABLE_PROMPTS=1 pacstall -A "$GITHUB_WORKSPACE"
+
+      - name: Pre-install pacdeps
+        env:
+          RECIPE: ${{ inputs.recipe }}
+        run: |
+          set -euo pipefail
+          # shellcheck disable=SC1090
+          source "recipes/${RECIPE}/${RECIPE}.pacscript"
+          # pacstall's cleanup() runs `rm -rf "${STAGEDIR}/${pacname}"*`, so a
+          # pacdep whose name prefixes the package name (limine vs
+          # limine-entry-tool) deletes the staged tree mid-build. Installing
+          # pacdeps up front makes the build-time check see them as present.
+          for dep in ${pacdeps[@]+"${pacdeps[@]}"}; do
+            echo "Pre-installing pacdep: ${dep}"
+            sudo DISABLE_PROMPTS=1 pacstall -Ns -I "$dep"
+          done
+
       - name: Build deb
         env:
           RECIPE: ${{ inputs.recipe }}
-          DISABLE_PROMPTS: "1"
-          PACSTALL_BUILD_CORES: "4"
         run: |
           set -euo pipefail
-          # pacdeps in the recipe must resolve, so expose the checkout as a repo
-          sudo -E pacstall -A "$GITHUB_WORKSPACE"
           # -Ns: hosted runners cannot use bwrap (AppArmor userns restriction)
-          sudo -E pacstall -B -Ns -I "$GITHUB_WORKSPACE/recipes/${RECIPE}/${RECIPE}.pacscript"
+          sudo DISABLE_PROMPTS=1 PACSTALL_BUILD_CORES=4 \
+            pacstall -B -Ns -I "$GITHUB_WORKSPACE/recipes/${RECIPE}/${RECIPE}.pacscript"
 
       - name: Collect deb
         id: collect
