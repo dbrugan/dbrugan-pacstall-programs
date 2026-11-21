@@ -38,11 +38,14 @@ repos:
         language: system
         entry: ./scripts/srcinfo.sh write
         files: '^.*\.pacscript$'
+        # build recipes under recipes/ are CI-only and are not repo packages
+        exclude: '^recipes/'
       - id: check-srcinfo
         name: check for .SRCINFO
         language: system
         entry: ./scripts/srcinfo.sh check
         files: '^.*\.pacscript$'
+        exclude: '^recipes/'
       - id: update-pkglist
         name: update packagelist
         language: system

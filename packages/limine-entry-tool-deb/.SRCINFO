@@ -1,0 +1,24 @@
+pkgbase = limine-entry-tool-deb
+	gives = limine-entry-tool
+	pkgver = 1.40.0
+	pkgrel = 1
+	pkgdesc = Entry management for the Limine bootloader
+	url = https://gitlab.com/Zesko/limine-entry-tool
+	arch = amd64
+	depends = bash
+	depends = coreutils
+	depends = efibootmgr
+	depends = gawk
+	depends = grep
+	depends = libc6>=2.43
+	depends = sed
+	depends = tar
+	depends = util-linux
+	depends = zlib1g
+	pacdeps = limine
+	license = GPL-3.0-or-later
+	maintainer = dbrugan <dbrugan@protonmail.com>
+	source = https://github.com/dbrugan/dbrugan-pacstall-programs/releases/download/limine-entry-tool-1.40.0/limine-entry-tool_1.40.0-pacstall1_amd64.deb
+	sha256sums = SKIP
+
+pkgname = limine-entry-tool-deb

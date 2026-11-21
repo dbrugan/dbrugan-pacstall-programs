@@ -1,0 +1,210 @@
+name: build-debs
+
+on:
+  workflow_dispatch:
+    inputs:
+      recipe:
+        description: Recipe directory under recipes/
+        required: true
+        default: limine-entry-tool
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-debs-${{ inputs.recipe }}
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    name: build
+    runs-on: ubuntu-26.04
+    outputs:
+      recipe: ${{ steps.meta.outputs.recipe }}
+      version: ${{ steps.meta.outputs.version }}
+      deb: ${{ steps.collect.outputs.deb }}
+      floor: ${{ steps.abi.outputs.floor }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Read recipe metadata
+        id: meta
+        env:
+          RECIPE: ${{ inputs.recipe }}
+        run: |
+          set -euo pipefail
+          # shellcheck disable=SC1090
+          source "recipes/${RECIPE}/${RECIPE}.pacscript"
+          echo "recipe=${pkgname}" >> "$GITHUB_OUTPUT"
+          echo "version=${pkgver}" >> "$GITHUB_OUTPUT"
+          echo "Building ${pkgname} ${pkgver}-${pkgrel:-1} from ${RECIPE}"
+
+      - name: Install pacstall
+        run: sudo bash -c "$(curl -fsSL https://pacstall.dev/q/install)"
+
+      - name: Build deb
+        env:
+          RECIPE: ${{ inputs.recipe }}
+          DISABLE_PROMPTS: "1"
+          PACSTALL_BUILD_CORES: "4"
+        run: |
+          set -euo pipefail
+          # pacdeps in the recipe must resolve, so expose the checkout as a repo
+          sudo -E pacstall -A "$GITHUB_WORKSPACE"
+          # -Ns: hosted runners cannot use bwrap (AppArmor userns restriction)
+          sudo -E pacstall -B -Ns -I "$GITHUB_WORKSPACE/recipes/${RECIPE}/${RECIPE}.pacscript"
+
+      - name: Collect deb
+        id: collect
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          debs=(./*.deb)
+          if ((${#debs[@]} != 1)); then
+            echo "::error::expected exactly one deb, found ${#debs[@]}"
+            ls -l ./*.deb || true
+            exit 1
+          fi
+          echo "deb=${debs[0]}" >> "$GITHUB_OUTPUT"
+          dpkg-deb -f "${debs[0]}" Package Version Architecture Installed-Size Depends
+
+      - name: Check ABI floor
+        id: abi
+        env:
+          DEB: ${{ steps.collect.outputs.deb }}
+        run: |
+          set -euo pipefail
+          rm -rf unpack
+          dpkg-deb -x "$DEB" unpack
+          floor="0"
+          while IFS= read -r -d '' f; do
+            [[ "$(file -b "$f")" == ELF* ]] || continue
+            v="$(objdump -T "$f" 2> /dev/null \
+              | grep -oE 'GLIBC_[0-9][0-9.]*' | sed 's/GLIBC_//' | sort -V | tail -1 || true)"
+            [[ -n "$v" ]] || continue
+            floor="$(printf '%s\n%s\n' "$floor" "$v" | sort -V | tail -1)"
+          done < <(find unpack -type f -print0)
+          echo "floor=${floor}" >> "$GITHUB_OUTPUT"
+          if [[ "$floor" == "0" ]]; then
+            echo "::warning::no dynamic GLIBC symbols found; libc6 cannot be pinned"
+          else
+            echo "Max GLIBC symbol version required: ${floor}"
+          fi
+
+      - name: Compare ABI floor with pacscript
+        env:
+          RECIPE: ${{ inputs.recipe }}
+          FLOOR: ${{ steps.abi.outputs.floor }}
+        run: |
+          set -euo pipefail
+          if [[ "$FLOOR" == "0" ]]; then
+            echo "::warning::no GLIBC requirement detected, skipping pin check"
+            exit 0
+          fi
+          pinfile="packages/${RECIPE}-deb/${RECIPE}-deb.pacscript"
+          if [[ ! -f "$pinfile" ]]; then
+            echo "::warning::$pinfile does not exist yet, skipping pin check"
+            exit 0
+          fi
+          declared="$(grep -oE '"libc6>=[0-9.]+"' "$pinfile" | tr -d '"' | cut -d= -f2 || true)"
+          if [[ -z "$declared" ]]; then
+            echo "::warning::$pinfile does not pin libc6"
+            exit 0
+          fi
+          if [[ "$(printf '%s\n%s\n' "$declared" "$FLOOR" | sort -V | head -1)" != "$FLOOR" ]]; then
+            echo "::error::$pinfile declares libc6>=$declared but binaries need $FLOOR"
+            exit 1
+          fi
+          if [[ "$declared" != "$FLOOR" ]]; then
+            echo "::warning::can relax libc6 to $FLOOR in $pinfile"
+          fi
+
+      - name: Run summary
+        env:
+          RECIPE: ${{ steps.meta.outputs.recipe }}
+          VERSION: ${{ steps.meta.outputs.version }}
+          DEB: ${{ steps.collect.outputs.deb }}
+          FLOOR: ${{ steps.abi.outputs.floor }}
+        run: |
+          set -euo pipefail
+          hash="$(sha256sum "$DEB" | cut -d' ' -f1)"
+          {
+            echo "### ${RECIPE} ${VERSION}"
+            echo
+            echo "Paste into \`packages/${RECIPE}-deb/${RECIPE}-deb.pacscript\`:"
+            echo
+            echo '```'
+            echo "sha256sums=(\"${hash}\")"
+            [[ "$FLOOR" == "0" ]] || echo "\"libc6>=${FLOOR}\""
+            echo '```'
+            echo
+            echo "Published at:"
+            echo
+            echo "\`https://github.com/${GITHUB_REPOSITORY}/releases/download/${RECIPE}-${VERSION}/${DEB#./}\`"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: deb
+          path: ${{ steps.collect.outputs.deb }}
+          if-no-files-found: error
+
+  test:
+    name: test (ubuntu:26.04)
+    needs: [build]
+    runs-on: ubuntu-26.04
+    container: ubuntu:26.04
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: deb
+          path: dist
+
+      - name: Install in a clean rootfs
+        run: |
+          set -euo pipefail
+          apt-get update
+          pkg="$(dpkg-deb -f dist/*.deb Package)"
+          apt-get install -y ./dist/*.deb
+          dpkg -s "$pkg" | grep -E '^(Package|Version|Depends):'
+
+  release:
+    name: release
+    needs: [build, test]
+    runs-on: ubuntu-26.04
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: deb
+          path: dist
+
+      - name: Verify pacscript pins this artifact
+        run: |
+          set -euo pipefail
+          cd dist
+          sha256sum ./*.deb | sed 's| \./| |' > SHA256SUMS
+          cat SHA256SUMS
+          hash="$(cut -d' ' -f1 SHA256SUMS)"
+          cd "$GITHUB_WORKSPACE"
+          pinned="$(grep -rhoE '"[0-9a-f]{64}"' packages/*-deb/*.pacscript | tr -d '"' | head -1 || true)"
+          if [[ -z "$pinned" ]]; then
+            echo "::warning::no pinned sha256 yet; update the pacscript after this release"
+          elif [[ "$pinned" != "$hash" ]]; then
+            echo "::error::pacscript pins $pinned but the built deb is $hash"
+            exit 1
+          fi
+
+      - uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ needs.build.outputs.recipe }}-${{ needs.build.outputs.version }}
+          name: ${{ needs.build.outputs.recipe }} ${{ needs.build.outputs.version }}
+          files: |
+            dist/*.deb
+            dist/SHA256SUMS
+          fail_on_unmatched_files: true
